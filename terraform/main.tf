@@ -1,24 +1,32 @@
 locals {
   vnet_address_space = "10.10.0.0/16"
   subnet_prefix      = "10.10.1.0/24"
-  # Genera una lista de nombres de VM en función del prefijo y vm_count
-  vm_names           = [for i in range(var.vm_count) : format("%s-vm%02d", var.prefix, i + 1)]
+  common_tags = {
+    Environment = "Lab"
+    Project     = "ASW-Lab3"
+    Author      = var.author_uo
+    Course      = "Arquitectura del Software"
+    University  = "Universidad de Oviedo"
+  }
 }
 
-# Grupo de recursos compartido
+# Resource Group
 resource "azurerm_resource_group" "main" {
   name     = var.resource_group_name
   location = var.location
+  tags     = local.common_tags
 }
 
-# Red virtual y subred compartidas
+# Virtual Network
 resource "azurerm_virtual_network" "main" {
   name                = "${var.prefix}-vnet"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
   address_space       = [local.vnet_address_space]
+  tags                = local.common_tags
 }
 
+# Subnet
 resource "azurerm_subnet" "main" {
   name                 = "${var.prefix}-subnet"
   resource_group_name  = azurerm_resource_group.main.name
@@ -26,14 +34,15 @@ resource "azurerm_subnet" "main" {
   address_prefixes     = [local.subnet_prefix]
 }
 
-# NSG con reglas para SSH y HTTP
+# Network Security Group with all required ports
 resource "azurerm_network_security_group" "main" {
   name                = "${var.prefix}-nsg"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
+  tags                = local.common_tags
 
   security_rule {
-    name                       = "allow-ssh-from-cidr"
+    name                       = "allow-ssh"
     priority                   = 100
     direction                  = "Inbound"
     access                     = "Allow"
@@ -55,49 +64,97 @@ resource "azurerm_network_security_group" "main" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
+
+  security_rule {
+    name                       = "allow-app-3000"
+    priority                   = 120
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "3000"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+
+  security_rule {
+    name                       = "allow-app-4000"
+    priority                   = 130
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "4000"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+
+  security_rule {
+    name                       = "allow-monitoring-9090"
+    priority                   = 140
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "9090"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+
+  security_rule {
+    name                       = "allow-monitoring-9091"
+    priority                   = 150
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "9091"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
 }
 
-# Asociar NSG a la subred
+# Associate NSG with Subnet
 resource "azurerm_subnet_network_security_group_association" "main" {
   subnet_id                 = azurerm_subnet.main.id
   network_security_group_id = azurerm_network_security_group.main.id
 }
 
-# Crear una IP pública por VM
-resource "azurerm_public_ip" "vm" {
-  for_each            = toset(local.vm_names)
-  name                = "${each.value}-pip"
+# Public IP
+resource "azurerm_public_ip" "main" {
+  name                = "${var.prefix}-pip"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
   allocation_method   = "Static"
   sku                 = "Standard"
+  tags                = local.common_tags
 }
 
-# Crear una NIC por VM y asociar la IP pública
-resource "azurerm_network_interface" "vm" {
-  for_each            = toset(local.vm_names)
-  name                = "${each.value}-nic"
+# Network Interface
+resource "azurerm_network_interface" "main" {
+  name                = "${var.prefix}-nic"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
+  tags                = local.common_tags
 
   ip_configuration {
     name                          = "ipconfig1"
     subnet_id                     = azurerm_subnet.main.id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.vm[each.value].id
+    public_ip_address_id          = azurerm_public_ip.main.id
   }
 }
 
-# Definir una VM Linux por nombre en la lista
-resource "azurerm_linux_virtual_machine" "vm" {
-  for_each                        = toset(local.vm_names)
-  name                            = each.value
+# Linux Virtual Machine
+resource "azurerm_linux_virtual_machine" "main" {
+  name                            = var.vm_name
   location                        = azurerm_resource_group.main.location
   resource_group_name             = azurerm_resource_group.main.name
   size                            = var.vm_size
   admin_username                  = var.admin_username
-  network_interface_ids           = [azurerm_network_interface.vm[each.value].id]
+  network_interface_ids           = [azurerm_network_interface.main.id]
   disable_password_authentication = true
+  tags                            = local.common_tags
 
   admin_ssh_key {
     username   = var.admin_username
