@@ -1,28 +1,65 @@
 ---
+# Common system configuration and essential packages
+
 - name: Update apt cache
   apt:
     update_cache: yes
     cache_valid_time: 3600
+  tags:
+    - common
+    - packages
 
-- name: Install base packages
+- name: Upgrade all packages to latest version
+  apt:
+    upgrade: dist
+  tags:
+    - common
+    - packages
+    - never  # Only run when explicitly requested
+
+- name: Install essential system packages
   apt:
     name:
+      - vim
+      - nano
+      - git
+      - htop
       - curl
       - wget
-      - vim
-      - htop
-      - ufw
+      - unzip
+      - net-tools
+      - jq
+      - tree
+      - python3
+      - python3-pip
     state: present
+  tags:
+    - common
+    - packages
 
-- name: Configure firewall
-  ufw:
-    rule: allow
-    port: "{{ item }}"
-    proto: tcp
-  loop:
-    - '22'
-    - '80'
+- name: Set timezone to Europe/Madrid
+  timezone:
+    name: Europe/Madrid
+  tags:
+    - common
+    - system
 
-- name: Enable firewall
-  ufw:
-    state: enabled
+- name: Ensure locale is set
+  locale_gen:
+    name: en_US.UTF-8
+    state: present
+  tags:
+    - common
+    - system
+
+- name: Display system information
+  debug:
+    msg:
+      - "Hostname: {{ ansible_hostname }}"
+      - "OS: {{ ansible_distribution }} {{ ansible_distribution_version }}"
+      - "Kernel: {{ ansible_kernel }}"
+      - "Architecture: {{ ansible_architecture }}"
+      - "Python: {{ ansible_python_version }}"
+  tags:
+    - common
+    - verify
