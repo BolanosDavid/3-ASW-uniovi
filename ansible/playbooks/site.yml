@@ -1,6 +1,68 @@
 ---
-- name: Configure base system
-  import_playbook: base.yml
+# Main playbook for Lab3 - Single VM Docker deployment
+# Author: UO302313 - David Fernando Bolaños López
 
-- name: Deploy web server
-  import_playbook: webserver.yml
+- name: Configure deployment VM for Docker applications
+  hosts: deployment_vm
+  become: yes
+  
+  pre_tasks:
+    - name: Wait for system to be ready
+      wait_for_connection:
+        timeout: 300
+      tags:
+        - always
+    
+    - name: Gather facts
+      setup:
+      tags:
+        - always
+  
+  roles:
+    - role: common
+      tags:
+        - common
+    
+    - role: docker
+      tags:
+        - docker
+    
+    - role: firewall
+      tags:
+        - firewall
+  
+  post_tasks:
+    - name: Display deployment summary
+      debug:
+        msg:
+          - ""
+          - "==============================================" 
+          - "  VM DEPLOYMENT COMPLETED SUCCESSFULLY"
+          - "==============================================" 
+          - ""
+          - "VM Configuration:"
+          - "  - Hostname: {{ ansible_hostname }}"
+          - "  - OS: {{ ansible_distribution }} {{ ansible_distribution_version }}"
+          - "  - IP Address: {{ ansible_default_ipv4.address }}"
+          - "  - User: {{ ansible_user }}"
+          - ""
+          - "Installed Software:"
+          - "  ✓ Docker Engine"
+          - "  ✓ Docker Compose (plugin)"
+          - "  ✓ Essential system packages"
+          - ""
+          - "Firewall Configuration:"
+          - "  ✓ UFW enabled"
+          - "  ✓ Allowed ports: 22, 80, 3000, 4000, 9090, 9091"
+          - ""
+          - "Next Steps:"
+          - "  1. Log out and back in for docker group to take effect"
+          - "  2. Verify Docker: docker --version"
+          - "  3. Deploy your application: docker compose up -d"
+          - ""
+          - "SSH Connection:"
+          - "  ssh {{ ansible_user }}@{{ ansible_default_ipv4.address }}"
+          - ""
+          - "==============================================" 
+      tags:
+        - always

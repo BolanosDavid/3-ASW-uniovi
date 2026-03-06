@@ -1,8 +1,21 @@
-resource_group_name = "rg-asr-lab-01"
-location            = "westeurope"
-prefix              = "asr"
-vm_size             = "Standard_B1s"
-admin_username      = "azureuser"
+# Azure Resource Group Configuration
+resource_group_name = "rg-asw-lab3-uo302313"
+
+# Azure Region (Lab3 requirement: France Central)
+location = "francecentral"
+
+# Resource Naming
+prefix  = "asw-lab3"
+vm_name = "asw-lab3-vm"
+
+# VM Configuration (Lab3 requirement: Standard_B2ats_v2)
+vm_size = "Standard_B2ats_v2"
+
+# Admin User Configuration
+admin_username = "azureuser"
+
+# SSH Key Path (adjust to your local path)
 ssh_public_key_path = "~/.ssh/id_rsa.pub"
-allowed_ssh_cidr    = "0.0.0.0/0"
-vm_count            = 3
+
+# Author Information
+author_uo = "UO302313"

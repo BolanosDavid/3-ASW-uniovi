@@ -1,0 +1,109 @@
+---
+# Firewall configuration for Lab3 requirements
+# Required ports: 22 (SSH), 80 (HTTP), 3000, 4000, 9090, 9091
+
+- name: Install ufw (Uncomplicated Firewall)
+  apt:
+    name: ufw
+    state: present
+  tags:
+    - firewall
+    - packages
+
+- name: Reset ufw to default state
+  ufw:
+    state: reset
+  tags:
+    - firewall
+    - never  # Only run when explicitly requested
+
+- name: Set ufw default policy (deny incoming, allow outgoing)
+  ufw:
+    direction: "{{ item.direction }}"
+    policy: "{{ item.policy }}"
+  loop:
+    - { direction: 'incoming', policy: 'deny' }
+    - { direction: 'outgoing', policy: 'allow' }
+  tags:
+    - firewall
+
+- name: Allow SSH (port 22)
+  ufw:
+    rule: allow
+    port: '22'
+    proto: tcp
+    comment: 'SSH access'
+  tags:
+    - firewall
+    - ssh
+
+- name: Allow HTTP (port 80)
+  ufw:
+    rule: allow
+    port: '80'
+    proto: tcp
+    comment: 'HTTP web traffic'
+  tags:
+    - firewall
+    - web
+
+- name: Allow application port 3000
+  ufw:
+    rule: allow
+    port: '3000'
+    proto: tcp
+    comment: 'Application port 3000'
+  tags:
+    - firewall
+    - app
+
+- name: Allow application port 4000
+  ufw:
+    rule: allow
+    port: '4000'
+    proto: tcp
+    comment: 'Application port 4000'
+  tags:
+    - firewall
+    - app
+
+- name: Allow monitoring port 9090
+  ufw:
+    rule: allow
+    port: '9090'
+    proto: tcp
+    comment: 'Monitoring port 9090'
+  tags:
+    - firewall
+    - monitoring
+
+- name: Allow monitoring port 9091
+  ufw:
+    rule: allow
+    port: '9091'
+    proto: tcp
+    comment: 'Monitoring port 9091'
+  tags:
+    - firewall
+    - monitoring
+
+- name: Enable ufw
+  ufw:
+    state: enabled
+  tags:
+    - firewall
+
+- name: Display firewall status
+  command: ufw status verbose
+  register: ufw_status
+  changed_when: false
+  tags:
+    - firewall
+    - verify
+
+- name: Show configured firewall rules
+  debug:
+    msg: "{{ ufw_status.stdout_lines }}"
+  tags:
+    - firewall
+    - verify

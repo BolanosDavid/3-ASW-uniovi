@@ -1,5 +1,12 @@
 ---
+# Base configuration playbook - Only common packages
+# Use this for minimal VM setup without Docker
+
 - name: Base system configuration
-  hosts: webservers
+  hosts: deployment_vm
+  become: yes
+  
   roles:
-    - common
+    - role: common
+      tags:
+        - common

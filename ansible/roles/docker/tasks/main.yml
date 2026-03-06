@@ -1,0 +1,133 @@
+---
+# Docker installation following official documentation:
+# https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+- name: Install prerequisites for Docker
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg
+      - lsb-release
+    state: present
+    update_cache: yes
+  tags:
+    - docker
+    - packages
+
+- name: Create directory for Docker GPG key
+  file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: '0755'
+  tags:
+    - docker
+
+- name: Add Docker GPG key
+  shell: |
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    chmod a+r /etc/apt/keyrings/docker.gpg
+  args:
+    creates: /etc/apt/keyrings/docker.gpg
+  tags:
+    - docker
+
+- name: Add Docker repository
+  shell: |
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+  args:
+    creates: /etc/apt/sources.list.d/docker.list
+  tags:
+    - docker
+
+- name: Update apt cache after adding Docker repo
+  apt:
+    update_cache: yes
+  tags:
+    - docker
+
+- name: Install Docker Engine, CLI, containerd, and Compose plugin
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+    state: present
+  tags:
+    - docker
+    - packages
+
+- name: Ensure Docker service is started and enabled
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+  tags:
+    - docker
+    - services
+
+- name: Add user to docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
+  tags:
+    - docker
+    - users
+
+- name: Reset SSH connection to allow user group changes to take effect
+  meta: reset_connection
+  tags:
+    - docker
+
+- name: Verify Docker installation
+  command: docker --version
+  register: docker_version
+  changed_when: false
+  tags:
+    - docker
+    - verify
+
+- name: Display Docker version
+  debug:
+    msg: "✓ Docker installed: {{ docker_version.stdout }}"
+  tags:
+    - docker
+    - verify
+
+- name: Verify Docker Compose plugin
+  command: docker compose version
+  register: compose_version
+  changed_when: false
+  tags:
+    - docker
+    - verify
+
+- name: Display Docker Compose version
+  debug:
+    msg: "✓ Docker Compose installed: {{ compose_version.stdout }}"
+  tags:
+    - docker
+    - verify
+
+- name: Test Docker functionality
+  command: docker run --rm hello-world
+  register: docker_test
+  changed_when: false
+  failed_when: docker_test.rc != 0
+  tags:
+    - docker
+    - verify
+    - never  # Only run when explicitly requested
+
+- name: Display Docker test result
+  debug:
+    msg: "✓ Docker is working correctly"
+  when: docker_test is succeeded
+  tags:
+    - docker
+    - verify
+    - never
