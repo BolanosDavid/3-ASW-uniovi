@@ -16,20 +16,22 @@ Implementación de infraestructura como código (IaC) que automatiza:
 2. **Configuración de software** mediante Ansible (Docker, firewall, herramientas)
 3. **Preparación para despliegue** de aplicaciones containerizadas
 
-El resultado es una máquina virtual Ubuntu lista para ejecutar aplicaciones con Docker Compose.
+El resultado es una máquina virtual Ubuntu lista para ejecutar aplicaciones con Docker Compose, **incluyendo Nginx como proxy inverso containerizado**.
 
 ---
 
 ## 🏛️ Infraestructura Desplegada
 
-### Recursos Azure
+### Recursos Azure (Optimizados para Coste Mínimo)
 
 - **Resource Group**: Grupo de recursos para organizar componentes
-- **Virtual Network**: Red virtual con subnet (10.10.0.0/16)
-- **Network Security Group**: Reglas de firewall gestionadas
+- **Virtual Network**: Red virtual mínima (requerida por Azure para VMs)
 - **Public IP**: IP pública estática para acceso web
 - **Network Interface**: Interfaz de red de la VM
+- **Network Security Group**: Asociado a la NIC (no a subnet) para eficiencia
 - **Virtual Machine**: Ubuntu 22.04 LTS (Standard_B2ats_v2)
+
+> **💰 Optimización de Costes**: La infraestructura está diseñada con el mínimo de recursos necesarios. La VNet/Subnet son requisitos técnicos de Azure (sin coste adicional), y el NSG está asociado directamente a la NIC en lugar de a la subnet para evitar cobros por reglas redundantes.
 
 ### Configuración de la VM
 
@@ -46,9 +48,9 @@ El resultado es una máquina virtual Ubuntu lista para ejecutar aplicaciones con
 | Puerto | Protocolo | Uso |
 |--------|-----------|-----|
 | 22 | TCP | SSH |
-| 80 | TCP | HTTP |
-| 3000 | TCP | Aplicación |
-| 4000 | TCP | Aplicación |
+| 80 | TCP | HTTP (Nginx proxy inverso) |
+| 3000 | TCP | Aplicación / Servicio |
+| 4000 | TCP | Aplicación / Servicio |
 | 9090 | TCP | Monitoring |
 | 9091 | TCP | Monitoring |
 
@@ -58,6 +60,8 @@ El resultado es una máquina virtual Ubuntu lista para ejecutar aplicaciones con
 - ✓ **Docker Compose** (plugin moderno)
 - ✓ **UFW Firewall** (configurado y activo)
 - ✓ Herramientas esenciales (git, vim, curl, htop, jq, etc.)
+
+> **⚠️ Nginx NO se instala en el sistema**: Nginx corre como contenedor Docker gestionado por tu `docker-compose.yml`. No es necesario instalarlo con Ansible.
 
 ---
 
@@ -142,11 +146,8 @@ vm_name              = "asw-lab3-vm"            # Nombre de la VM
 vm_size              = "Standard_B2ats_v2"     # Tamaño de VM (Lab3)
 admin_username       = "azureuser"             # Usuario admin
 ssh_public_key_path  = "~/.ssh/id_rsa.pub"     # Ruta a tu clave pública
-allowed_ssh_cidr     = "TU_IP/32"              # Restricción SSH (recomendado)
 author_uo            = "UO302313"              # Tu UO
 ```
-
-> **🔒 Seguridad SSH**: Reemplaza `allowed_ssh_cidr` con tu IP pública. Para obtenerla: `curl ifconfig.me`
 
 ### Paso 2: Desplegar Infraestructura (Terraform)
 
@@ -231,66 +232,95 @@ docker run --rm hello-world
 
 ---
 
-## 📦 Desplegar una Aplicación (Ejemplo)
+## 📦 Desplegar tu Aplicación con GitHub Actions
 
-Una vez la VM esté configurada:
+### Configuración de Secrets en GitHub
 
-### Ejemplo 1: Servidor Web Nginx
+Tu workflow de GitHub Actions ya está preparado. Solo necesitas configurar estos secrets en tu repositorio:
+
+1. Ve a: **Settings → Secrets and variables → Actions**
+2. Añade los siguientes secrets:
+
+```
+DEPLOY_HOST  → La IP pública de tu VM (obtenida de terraform output)
+DEPLOY_USER  → azureuser
+DEPLOY_KEY   → Contenido de tu clave privada SSH (~/.ssh/id_rsa)
+```
+
+### Flujo de Despliegue Automático
+
+Cuando crees un **release** en GitHub:
+
+1. ✅ Se ejecutan tests de Node.js (webapp, users, auth)
+2. ✅ Se ejecutan tests de Rust (gamey)
+3. ✅ Se ejecutan tests E2E con Playwright
+4. ✅ Se construyen y publican imágenes Docker a GitHub Container Registry
+5. ✅ Se despliega automáticamente en tu VM vía SSH
+
+### ¿Necesitas instalar Nginx en la VM?
+
+**NO** ❌. Tu workflow ya incluye Nginx como contenedor Docker:
+
+```yaml
+# Tu workflow descarga estos archivos:
+wget ... docker-compose.yml
+wget ... nginx/nginx.conf
+
+# Y ejecuta:
+docker compose up -d
+```
+
+Nginx correrá como un contenedor más, actuando como **proxy inverso** para tus servicios (webapp, users, auth, gamey). La configuración actual de Ansible (que solo instala Docker Engine + Compose) es perfecta para tu caso de uso.
+
+### Arquitectura de tu Despliegue
+
+```
+Internet
+    |
+    v
+[Azure VM: 20.74.123.45]
+    |
+    +-- Docker Compose
+         |
+         +-- nginx:latest (puerto 80) ← Proxy inverso
+         |     ↓ /api/users → users:3000
+         |     ↓ /api/gamey → gamey:8080
+         |     ↓ / → webapp:3000
+         |
+         +-- users:latest (puerto 3000)
+         +-- auth:latest (puerto 4000)
+         +-- gamey:latest (puerto 8080)
+         +-- webapp:latest (puerto 3000)
+```
+
+---
+
+## 📦 Ejemplo de Despliegue Manual (Opcional)
+
+Si quieres desplegar manualmente sin GitHub Actions:
 
 ```bash
 # Conectar a la VM
 ssh azureuser@<PUBLIC_IP>
 
 # Crear directorio de proyecto
-mkdir ~/webapp && cd ~/webapp
+mkdir ~/myapp && cd ~/myapp
 
-# Crear docker-compose.yml
-cat > docker-compose.yml <<EOF
-services:
-  web:
-    image: nginx:alpine
-    ports:
-      - "80:80"
-    restart: unless-stopped
-EOF
+# Descargar tu docker-compose.yml y configuración
+wget https://raw.githubusercontent.com/<TU_USUARIO>/<TU_REPO>/main/docker-compose.yml
+mkdir -p nginx
+wget https://raw.githubusercontent.com/<TU_USUARIO>/<TU_REPO>/main/nginx/nginx.conf -O nginx/nginx.conf
+
+# Autenticar en GitHub Container Registry
+echo $GITHUB_TOKEN | docker login ghcr.io -u <TU_USUARIO> --password-stdin
 
 # Desplegar
+docker compose pull
 docker compose up -d
 
 # Verificar
-curl http://localhost
-```
-
-Accede desde tu navegador: `http://<PUBLIC_IP>`
-
-### Ejemplo 2: Aplicación Node.js
-
-```bash
-mkdir ~/myapp && cd ~/myapp
-
-# Crear Dockerfile
-cat > Dockerfile <<EOF
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-EXPOSE 3000
-CMD ["npm", "start"]
-EOF
-
-# Crear docker-compose.yml
-cat > docker-compose.yml <<EOF
-services:
-  app:
-    build: .
-    ports:
-      - "3000:3000"
-    restart: unless-stopped
-EOF
-
-# Desplegar
-docker compose up -d --build
+docker compose ps
+curl http://localhost/health
 ```
 
 ### Comandos Útiles Docker Compose
@@ -299,9 +329,10 @@ docker compose up -d --build
 docker compose up -d          # Iniciar en background
 docker compose ps             # Ver contenedores activos
 docker compose logs -f        # Ver logs en tiempo real
+docker compose logs nginx     # Ver logs de Nginx
 docker compose restart        # Reiniciar servicios
 docker compose down           # Parar y eliminar contenedores
-docker compose down -v        # Incluir volúmenes
+docker compose pull           # Actualizar imágenes
 ```
 
 ---
@@ -370,14 +401,17 @@ az account show
 
 ### Error: "SSH connection refused"
 
-**Problema**: La VM aún está iniciando o el firewall bloquea tu IP.
+**Problema**: La VM aún está iniciando.
 
 **Solución**:
 1. Espera 1-2 minutos después de `terraform apply`
-2. Verifica que tu IP esté permitida en `allowed_ssh_cidr`
-3. Comprueba reglas NSG:
+2. Verifica el estado de la VM en Azure Portal
+3. Comprueba que el puerto 22 esté abierto:
    ```bash
-   az network nsg rule list --resource-group <RG_NAME> --nsg-name <NSG_NAME> -o table
+   az network nsg rule list \
+     --resource-group <RG_NAME> \
+     --nsg-name <NSG_NAME> \
+     -o table
    ```
 
 ### Error: "Permission denied (publickey)"
@@ -429,39 +463,35 @@ groups
 # Debe aparecer 'docker' en la lista
 ```
 
-### Firewall: "Port is not accessible"
+### GitHub Actions: "Deploy over SSH failed"
 
-**Problema**: El puerto no está abierto en NSG o UFW.
+**Problema**: Los secrets no están configurados correctamente.
 
-**Solución NSG** (Azure):
-```bash
-az network nsg rule create \
-  --resource-group <RG_NAME> \
-  --nsg-name <NSG_NAME> \
-  --name allow-port-XXXX \
-  --priority 200 \
-  --destination-port-ranges XXXX \
-  --access Allow \
-  --protocol Tcp
-```
+**Solución**:
+1. Verifica que `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_KEY` estén en GitHub Secrets
+2. Asegúrate de que `DEPLOY_KEY` contenga la clave privada completa (incluye `-----BEGIN ... END-----`)
+3. Prueba la conexión SSH manualmente:
+   ```bash
+   ssh -i ~/.ssh/id_rsa azureuser@<PUBLIC_IP>
+   ```
 
-**Solución UFW** (VM):
-```bash
-ssh azureuser@<PUBLIC_IP>
-sudo ufw allow XXXX/tcp
-sudo ufw status
-```
+### Nginx: "502 Bad Gateway"
 
-### Terraform: "Resource already exists"
-
-**Problema**: Recursos previos no eliminados completamente.
+**Problema**: Los servicios backend no están corriendo o tienen problemas.
 
 **Solución**:
 ```bash
-# Importar recurso existente
-terraform import azurerm_resource_group.main /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RG_NAME>
+# Ver estado de contenedores
+docker compose ps
 
-# O eliminar manualmente desde Azure Portal y volver a aplicar
+# Ver logs de servicios
+docker compose logs users
+docker compose logs auth
+docker compose logs gamey
+docker compose logs webapp
+
+# Reiniciar servicios problemáticos
+docker compose restart <service_name>
 ```
 
 ---
@@ -475,13 +505,13 @@ terraform import azurerm_resource_group.main /subscriptions/<SUBSCRIPTION_ID>/re
 - [Docker Installation on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 - [Docker Compose Specification](https://docs.docker.com/compose/compose-file/)
 - [Azure Virtual Machines](https://learn.microsoft.com/en-us/azure/virtual-machines/)
-- [Azure CLI Documentation](https://learn.microsoft.com/en-us/cli/azure/)
+- [GitHub Actions - SSH Deploy](https://github.com/marketplace/actions/ssh-remote-commands)
 
 ### Recursos del Curso
 
 - Diapositivas Lab3: ES.ASW.PL03_Despliegue.pdf
 - GitHub Actions para despliegue continuo
-- Docker Hub: https://hub.docker.com/
+- GitHub Container Registry: https://ghcr.io/
 
 ---
 
@@ -489,18 +519,20 @@ terraform import azurerm_resource_group.main /subscriptions/<SUBSCRIPTION_ID>/re
 
 ### Decisiones Técnicas
 
-- **VM Size**: Standard_B2ats_v2 optimizado para cargas con bajo uso de CPU (burstable)
-- **Docker Compose**: Plugin moderno (`docker compose`) en lugar de legacy (`docker-compose`)
-- **Firewall**: Doble capa (NSG en Azure + UFW en VM) para máxima flexibilidad
+- **Networking mínimo**: VNet/Subnet son requisitos de Azure pero no generan costes adicionales. NSG asociado a NIC en lugar de subnet para eficiencia.
+- **Sin Nginx en sistema**: Nginx corre como contenedor Docker, gestionado por docker-compose.yml del proyecto.
+- **Docker Compose moderno**: Plugin (`docker compose`) en lugar de legacy (`docker-compose`)
+- **Firewall doble capa**: NSG en Azure + UFW en VM para máxima flexibilidad
 - **Inventario dinámico**: Sincronización automática entre Terraform y Ansible
-- **Tags**: Metadatos para organización y billing
+- **Tags informativos**: Metadatos para organización y billing
 
 ### Seguridad
 
 - SSH con clave pública (password authentication disabled)
-- NSG con reglas restrictivas configurables
-- UFW firewall activo por defecto
+- NSG con reglas para puertos específicos (sin restricción de IP origen por simplicidad)
+- UFW firewall activo por defecto en la VM
 - Actualizaciones de paquetes gestionadas por Ansible
+- Imágenes Docker privadas en GitHub Container Registry
 
 ### Optimizaciones
 
@@ -508,6 +540,7 @@ terraform import azurerm_resource_group.main /subscriptions/<SUBSCRIPTION_ID>/re
 - Idempotencia en todos los playbooks
 - Outputs informativos en cada paso
 - Scripts con validación de errores (`set -e`)
+- Despliegue automatizado vía GitHub Actions
 
 ---
 
@@ -536,7 +569,8 @@ Para problemas o preguntas:
 3. Verifica los logs:
    - Terraform: `terraform show`
    - Ansible: `ansible-playbook -vvv`
-   - Docker: `docker logs <container_name>`
+   - Docker: `docker compose logs <service>`
+   - GitHub Actions: Pestaña "Actions" en tu repositorio
 
 ---
 
