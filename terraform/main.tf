@@ -1,4 +1,6 @@
 locals {
+  vnet_address_space = "10.10.0.0/16"
+  subnet_prefix      = "10.10.1.0/24"
   common_tags = {
     Environment = "Lab"
     Project     = "ASW-Lab3"
@@ -15,6 +17,23 @@ resource "azurerm_resource_group" "main" {
   tags     = local.common_tags
 }
 
+# Minimal Virtual Network (required by Azure for VM networking)
+resource "azurerm_virtual_network" "main" {
+  name                = "${var.prefix}-vnet"
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
+  address_space       = [local.vnet_address_space]
+  tags                = local.common_tags
+}
+
+# Subnet (required for NIC attachment)
+resource "azurerm_subnet" "main" {
+  name                 = "${var.prefix}-subnet"
+  resource_group_name  = azurerm_resource_group.main.name
+  virtual_network_name = azurerm_virtual_network.main.name
+  address_prefixes     = [local.subnet_prefix]
+}
+
 # Public IP
 resource "azurerm_public_ip" "main" {
   name                = "${var.prefix}-pip"
@@ -25,29 +44,14 @@ resource "azurerm_public_ip" "main" {
   tags                = local.common_tags
 }
 
-# Network Interface with inline security rules
-resource "azurerm_network_interface" "main" {
-  name                = "${var.prefix}-nic"
-  location            = azurerm_resource_group.main.location
-  resource_group_name = azurerm_resource_group.main.name
-  tags                = local.common_tags
-
-  ip_configuration {
-    name                          = "ipconfig1"
-    subnet_id                     = null
-    private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.main.id
-  }
-}
-
-# Network Security Group with all required ports
+# Network Security Group with all required ports for Docker deployment
 resource "azurerm_network_security_group" "main" {
   name                = "${var.prefix}-nsg"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
   tags                = local.common_tags
 
-  # SSH
+  # SSH access
   security_rule {
     name                       = "allow-ssh"
     priority                   = 100
@@ -60,7 +64,7 @@ resource "azurerm_network_security_group" "main" {
     destination_address_prefix = "*"
   }
 
-  # HTTP
+  # HTTP (Nginx proxy)
   security_rule {
     name                       = "allow-http"
     priority                   = 110
@@ -126,7 +130,23 @@ resource "azurerm_network_security_group" "main" {
   }
 }
 
-# Associate NSG with Network Interface
+# Network Interface
+resource "azurerm_network_interface" "main" {
+  name                = "${var.prefix}-nic"
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
+  tags                = local.common_tags
+
+  ip_configuration {
+    name                          = "ipconfig1"
+    subnet_id                     = azurerm_subnet.main.id
+    private_ip_address_allocation = "Dynamic"
+    public_ip_address_id          = azurerm_public_ip.main.id
+  }
+}
+
+# Associate NSG directly to Network Interface (not subnet)
+# This is more efficient and only affects this specific VM
 resource "azurerm_network_interface_security_group_association" "main" {
   network_interface_id      = azurerm_network_interface.main.id
   network_security_group_id = azurerm_network_security_group.main.id
