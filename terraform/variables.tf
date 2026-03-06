@@ -39,12 +39,6 @@ variable "ssh_public_key_path" {
   default     = "~/.ssh/id_rsa.pub"
 }
 
-variable "allowed_ssh_cidr" {
-  type        = string
-  description = "CIDR allowed for SSH access (restrict to your IP in production)"
-  default     = "0.0.0.0/0"
-}
-
 variable "author_uo" {
   type        = string
   description = "University ID of the author"
