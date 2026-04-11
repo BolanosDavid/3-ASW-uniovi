@@ -44,3 +44,15 @@ variable "author_uo" {
   description = "University ID of the author"
   default     = "UO302313"
 }
+
+variable "duckdns_token" {
+  type        = string
+  description = "DuckDNS token for automatic DNS update"
+  sensitive   = true
+}
+
+variable "duckdns_domain" {
+  type        = string
+  description = "DuckDNS subdomain (without .duckdns.org)"
+  default     = "yovi-es1c"
+}
