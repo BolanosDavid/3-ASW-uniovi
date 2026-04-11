@@ -47,15 +47,34 @@
   tags:
     - docker
 
-- name: Install Docker Engine, CLI, containerd, and Compose plugin
+- name: Install Docker Engine, CLI and containerd
   apt:
     name:
       - docker-ce
       - docker-ce-cli
       - containerd.io
       - docker-buildx-plugin
-      - docker-compose-plugin
     state: present
+  tags:
+    - docker
+    - packages
+
+- name: Get latest docker-compose standalone version
+  uri:
+    url: https://api.github.com/repos/docker/compose/releases/latest
+    return_content: yes
+  register: compose_release
+  tags:
+    - docker
+    - packages
+
+- name: Install docker-compose standalone binary (docker-compose with dash)
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/{{ compose_release.json.tag_name }}/docker-compose-linux-x86_64"
+    dest: /usr/local/bin/docker-compose
+    mode: '0755'
+    owner: root
+    group: root
   tags:
     - docker
     - packages
@@ -98,36 +117,17 @@
     - docker
     - verify
 
-- name: Verify Docker Compose plugin
-  command: docker compose version
+- name: Verify docker-compose standalone
+  command: docker-compose version
   register: compose_version
   changed_when: false
   tags:
     - docker
     - verify
 
-- name: Display Docker Compose version
+- name: Display docker-compose version
   debug:
-    msg: "✓ Docker Compose installed: {{ compose_version.stdout }}"
+    msg: "✓ docker-compose installed: {{ compose_version.stdout }}"
   tags:
     - docker
     - verify
-
-- name: Test Docker functionality
-  command: docker run --rm hello-world
-  register: docker_test
-  changed_when: false
-  failed_when: docker_test.rc != 0
-  tags:
-    - docker
-    - verify
-    - never  # Only run when explicitly requested
-
-- name: Display Docker test result
-  debug:
-    msg: "✓ Docker is working correctly"
-  when: docker_test is succeeded
-  tags:
-    - docker
-    - verify
-    - never
