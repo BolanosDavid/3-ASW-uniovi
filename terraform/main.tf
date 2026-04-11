@@ -64,7 +64,7 @@ resource "azurerm_network_security_group" "main" {
     destination_address_prefix = "*"
   }
 
-  # HTTP (Nginx proxy)
+  # HTTP (Nginx proxy + Let's Encrypt challenge redirect)
   security_rule {
     name                       = "allow-http"
     priority                   = 110
@@ -73,6 +73,19 @@ resource "azurerm_network_security_group" "main" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "80"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+
+  # HTTPS (Let's Encrypt + production traffic)
+  security_rule {
+    name                       = "allow-https"
+    priority                   = 115
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "443"
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
@@ -178,5 +191,29 @@ resource "azurerm_linux_virtual_machine" "main" {
     offer     = "0001-com-ubuntu-server-jammy"
     sku       = "22_04-lts-gen2"
     version   = "latest"
+  }
+}
+
+# Update DuckDNS automatically after VM is provisioned
+# This allows the release workflow in yovi_es1c to resolve the domain
+# instead of requiring manual secret updates.
+resource "null_resource" "update_duckdns" {
+  depends_on = [azurerm_public_ip.main]
+
+  # Re-run whenever the public IP changes
+  triggers = {
+    ip = azurerm_public_ip.main.ip_address
+  }
+
+  provisioner "local-exec" {
+    command = <<EOT
+      RESPONSE=$(curl -s "https://www.duckdns.org/update?domains=${var.duckdns_domain}&token=${var.duckdns_token}&ip=${azurerm_public_ip.main.ip_address}")
+      echo "DuckDNS response: $RESPONSE"
+      if [ "$RESPONSE" != "OK" ]; then
+        echo "ERROR: DuckDNS update failed"
+        exit 1
+      fi
+      echo "DuckDNS updated: ${var.duckdns_domain}.duckdns.org -> ${azurerm_public_ip.main.ip_address}"
+    EOT
   }
 }
