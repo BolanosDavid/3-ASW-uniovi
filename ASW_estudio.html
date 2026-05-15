@@ -439,7 +439,9 @@ const APP_DATA = {
     "generatedAt": "2026-05-13",
     "kahootsImportedAt": "2026-05-14",
     "kahootsImported": 214,
-    "deduplicatedAgainstKahoots": 53
+    "deduplicatedAgainstKahoots": 53,
+    "explanationsReviewedAt": "2026-05-15",
+    "explanationsReviewed": 351
   },
   "questions": [
     {
@@ -458,7 +460,7 @@ const APP_DATA = {
       "tags": [
         "git"
       ],
-      "explanation": "La respuesta correcta es: GIT es un sistema de control de versiones distribuido.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: GIT es un sistema de control de versiones distribuido. Git es un sistema de control de versiones distribuido: cada clon conserva historial y permite trabajar localmente antes de sincronizar con remotos."
     },
     {
       "id": "q004",
@@ -476,7 +478,7 @@ const APP_DATA = {
       "tags": [
         "RUP"
       ],
-      "explanation": "La respuesta correcta es: Inicio, elaboración, construcción y transición.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: Inicio, elaboración, construcción y transición. RUP estructura el proceso en cuatro fases: inicio, elaboración, construcción y transición; cada una reduce riesgos y madura el producto."
     },
     {
       "id": "q005",
@@ -494,7 +496,7 @@ const APP_DATA = {
       "tags": [
         "MDA"
       ],
-      "explanation": "La respuesta correcta es: Mediante abstracción se obtiene un modelo como simplificación de la realidad para entender y razonar sobre ella.. La arquitectura se centra en estructuras, elementos, relaciones, propiedades visibles y decisiones significativas."
+      "explanation": "La respuesta correcta es: Mediante abstracción se obtiene un modelo como simplificación de la realidad para entender y razonar sobre ella. MDA usa modelos como abstracciones del sistema y transformaciones automáticas o semiautomáticas para derivar productos software."
     },
     {
       "id": "q006",
@@ -512,7 +514,7 @@ const APP_DATA = {
       "tags": [
         "documentación"
       ],
-      "explanation": "La respuesta correcta es: cómo se ha realizado la documentación, su organización y cómo buscar información en ella.. Las vistas, diagramas, C4, arc42 y ADR ayudan a comunicar arquitectura a distintos stakeholders."
+      "explanation": "La respuesta correcta es: cómo se ha realizado la documentación, su organización y cómo buscar información en ella. La hoja de ruta de la documentación explica cómo está organizada, cómo se construyó y dónde encontrar información, para que la arquitectura sea navegable."
     },
     {
       "id": "q007",
@@ -530,7 +532,7 @@ const APP_DATA = {
       "tags": [
         "componentes"
       ],
-      "explanation": "La respuesta correcta es: Especifica la comunicación entre los componentes.. La arquitectura se centra en estructuras, elementos, relaciones, propiedades visibles y decisiones significativas."
+      "explanation": "La respuesta correcta es: Especifica la comunicación entre los componentes. La arquitectura no solo enumera componentes: también especifica relaciones y comunicación entre ellos."
     },
     {
       "id": "q008",
@@ -548,7 +550,7 @@ const APP_DATA = {
       "tags": [
         "atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: La arquitectura del software se define sobre una serie de atributos de calidad.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: La arquitectura del software se define sobre una serie de atributos de calidad. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "q009",
@@ -567,7 +569,7 @@ const APP_DATA = {
         "vistas",
         "módulos"
       ],
-      "explanation": "La respuesta correcta es: is-a, is-part-of y depends-on.. Las vistas, diagramas, C4, arc42 y ADR ayudan a comunicar arquitectura a distintos stakeholders."
+      "explanation": "La respuesta correcta es: is-a, is-part-of y depends-on. En una vista de módulos se documentan relaciones estructurales como especialización, composición y dependencia."
     },
     {
       "id": "q010",
@@ -585,7 +587,7 @@ const APP_DATA = {
       "tags": [
         "pipes and filters"
       ],
-      "explanation": "La respuesta correcta es: la falta de interactividad.. Los estilos en tiempo de ejecución definen componentes, conectores y formas de interacción."
+      "explanation": "La respuesta correcta es: la falta de interactividad. Pipes and Filters procesa datos en una cadena de transformaciones, por lo que encaja mal cuando se necesita interacción inmediata con el usuario."
     },
     {
       "id": "q012",
@@ -603,7 +605,7 @@ const APP_DATA = {
       "tags": [
         "ADD"
       ],
-      "explanation": "La respuesta correcta es: la identificación de atributos de calidad modelados mediante escenarios de calidad.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: la identificación de atributos de calidad modelados mediante escenarios de calidad. ADD es un método top-down de diseño guiado por atributos de calidad y escenarios, usado para elegir decisiones arquitectónicas que satisfagan esos objetivos."
     },
     {
       "id": "q013",
@@ -621,7 +623,7 @@ const APP_DATA = {
       "tags": [
         "git"
       ],
-      "explanation": "La respuesta correcta es: el repositorio remoto del cual se hizo la primera clonación.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: el repositorio remoto del cual se hizo la primera clonación. En Git, origin es el nombre remoto que normalmente apunta al repositorio desde el que se clonó por primera vez."
     },
     {
       "id": "q014",
@@ -639,7 +641,7 @@ const APP_DATA = {
       "tags": [
         "MVC"
       ],
-      "explanation": "La respuesta correcta es: el modelo.. Los estilos en tiempo de ejecución definen componentes, conectores y formas de interacción."
+      "explanation": "La respuesta correcta es: el modelo. Un estilo define una familia de organización arquitectónica más amplia; los patrones suelen ser soluciones más concretas y pueden combinarse o depender de otros patrones."
     },
     {
       "id": "q015",
@@ -657,7 +659,7 @@ const APP_DATA = {
       "tags": [
         "fluent interface"
       ],
-      "explanation": "La respuesta correcta es: se puede obtener si los métodos que modifican un objeto devuelven dicho objeto.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: se puede obtener si los métodos que modifican un objeto devuelven dicho objeto. Una interfaz fluida permite encadenar llamadas porque los métodos que modifican el objeto devuelven el propio objeto, normalmente this o su equivalente. No es un servicio web ni depende de HATEOAS."
     },
     {
       "id": "q017",
@@ -675,7 +677,7 @@ const APP_DATA = {
       "tags": [
         "MDA"
       ],
-      "explanation": "La respuesta correcta es: Se aplican transformaciones automáticas o semiautomáticas sobre modelos para generar productos software.. La arquitectura se centra en estructuras, elementos, relaciones, propiedades visibles y decisiones significativas."
+      "explanation": "La respuesta correcta es: Se aplican transformaciones automáticas o semiautomáticas sobre modelos para generar productos software. MDA usa modelos como abstracciones del sistema y transformaciones automáticas o semiautomáticas para derivar productos software."
     },
     {
       "id": "q018",
@@ -694,7 +696,7 @@ const APP_DATA = {
         "vistas",
         "diagramas"
       ],
-      "explanation": "La respuesta correcta es: Los diagramas son o pueden ser parte de la documentación de la vista.. Las vistas, diagramas, C4, arc42 y ADR ayudan a comunicar arquitectura a distintos stakeholders."
+      "explanation": "La respuesta correcta es: Los diagramas son o pueden ser parte de la documentación de la vista. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
     },
     {
       "id": "q019",
@@ -712,7 +714,7 @@ const APP_DATA = {
       "tags": [
         "atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: La arquitectura se define sobre una serie de atributos de calidad.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: La arquitectura se define sobre una serie de atributos de calidad. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "q020",
@@ -730,7 +732,7 @@ const APP_DATA = {
       "tags": [
         "ADD"
       ],
-      "explanation": "La respuesta correcta es: Crear escenarios de calidad que modelan atributos de calidad identificados.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: Crear escenarios de calidad que modelan atributos de calidad identificados. ADD es un método top-down de diseño guiado por atributos de calidad y escenarios, usado para elegir decisiones arquitectónicas que satisfagan esos objetivos."
     },
     {
       "id": "q021",
@@ -748,7 +750,7 @@ const APP_DATA = {
       "tags": [
         "UML"
       ],
-      "explanation": "La respuesta correcta es: Los estereotipos de UML amplían el lenguaje y lo adaptan mejor para definir arquitecturas.. Las vistas, diagramas, C4, arc42 y ADR ayudan a comunicar arquitectura a distintos stakeholders."
+      "explanation": "La respuesta correcta es: Los estereotipos de UML amplían el lenguaje y lo adaptan mejor para definir arquitecturas. Los estereotipos de UML permiten extender la notación para expresar conceptos arquitectónicos específicos sin abandonar el lenguaje estándar."
     },
     {
       "id": "q022",
@@ -766,7 +768,7 @@ const APP_DATA = {
       "tags": [
         "componentes"
       ],
-      "explanation": "La respuesta correcta es: los componentes representan elementos que existirán en tiempo de ejecución.. Los estilos en tiempo de ejecución definen componentes, conectores y formas de interacción."
+      "explanation": "La respuesta correcta es: los componentes representan elementos que existirán en tiempo de ejecución. Un estilo define una familia de organización arquitectónica más amplia; los patrones suelen ser soluciones más concretas y pueden combinarse o depender de otros patrones."
     },
     {
       "id": "q023",
@@ -784,7 +786,7 @@ const APP_DATA = {
       "tags": [
         "testabilidad"
       ],
-      "explanation": "La respuesta correcta es: Probabilidad de que un error existente sea detectado en la siguiente ejecución de pruebas.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: Probabilidad de que un error existente sea detectado en la siguiente ejecución de pruebas. La testabilidad expresa hasta qué punto un error existente puede detectarse mediante pruebas; mejora con observabilidad, control y aislamiento."
     },
     {
       "id": "q025",
@@ -802,7 +804,7 @@ const APP_DATA = {
       "tags": [
         "event-driven"
       ],
-      "explanation": "La respuesta correcta es: A través de mensajes asíncronos.. Los estilos en tiempo de ejecución definen componentes, conectores y formas de interacción."
+      "explanation": "La respuesta correcta es: A través de mensajes asíncronos. Un estilo define una familia de organización arquitectónica más amplia; los patrones suelen ser soluciones más concretas y pueden combinarse o depender de otros patrones."
     },
     {
       "id": "q026",
@@ -820,7 +822,7 @@ const APP_DATA = {
       "tags": [
         "SOLID"
       ],
-      "explanation": "La respuesta correcta es: un módulo esté abierto para extender y cerrado para modificar.. La modularidad busca bajo acoplamiento, alta cohesión, dependencias controladas y evolución independiente."
+      "explanation": "La respuesta correcta es: un módulo esté abierto para extender y cerrado para modificar. El principio Open/Closed indica que un módulo debería poder extenderse sin modificar su código existente, reduciendo el riesgo de introducir regresiones."
     },
     {
       "id": "q027",
@@ -838,7 +840,7 @@ const APP_DATA = {
       "tags": [
         "fluent interface"
       ],
-      "explanation": "La respuesta correcta es: los métodos modificadores devuelven el objeto sobre el que actúan.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: los métodos modificadores devuelven el objeto sobre el que actúan. Una interfaz fluida permite encadenar llamadas porque los métodos que modifican el objeto devuelven el propio objeto, normalmente this o su equivalente. No es un servicio web ni depende de HATEOAS."
     },
     {
       "id": "q028",
@@ -856,7 +858,7 @@ const APP_DATA = {
       "tags": [
         "AOP"
       ],
-      "explanation": "La respuesta correcta es: La reutilización de código.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: La reutilización de código. La programación orientada a aspectos encapsula preocupaciones transversales, como logging o seguridad, y favorece su reutilización sin dispersarlas por muchos módulos."
     },
     {
       "id": "q029",
@@ -874,7 +876,7 @@ const APP_DATA = {
       "tags": [
         "actores"
       ],
-      "explanation": "La respuesta correcta es: un actor es una entidad computacional con estado.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: un actor es una entidad computacional con estado. MDA usa modelos como abstracciones del sistema y transformaciones automáticas o semiautomáticas para derivar productos software."
     },
     {
       "id": "q030",
@@ -892,7 +894,7 @@ const APP_DATA = {
       "tags": [
         "REST"
       ],
-      "explanation": "La respuesta correcta es: REST se basa en cliente-servidor sin estado.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: REST se basa en cliente-servidor sin estado. REST combina cliente-servidor y ausencia de estado entre peticiones: cada solicitud debe contener la información necesaria para ser entendida por el servidor."
     },
     {
       "id": "q031",
@@ -910,7 +912,7 @@ const APP_DATA = {
       "tags": [
         "CRM"
       ],
-      "explanation": "La respuesta correcta es: permite adaptar productos a las necesidades de los clientes.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: permite adaptar productos a las necesidades de los clientes. CRM gestiona relación con clientes, ventas, soporte, satisfacción y canales como call centers."
     },
     {
       "id": "q032",
@@ -928,7 +930,7 @@ const APP_DATA = {
       "tags": [
         "git"
       ],
-      "explanation": "La respuesta correcta es: checkout permite cambiar de una rama a otra.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: checkout permite cambiar de una rama a otra. git checkout permite cambiar de rama o restaurar contenido; en estos test se usa como comando clásico para moverse entre ramas."
     },
     {
       "id": "q033",
@@ -946,7 +948,7 @@ const APP_DATA = {
       "tags": [
         "definición"
       ],
-      "explanation": "La respuesta correcta es: Estructuras del sistema, elementos software, propiedades visibles y relaciones.. La arquitectura se centra en estructuras, elementos, relaciones, propiedades visibles y decisiones significativas."
+      "explanation": "La respuesta correcta es: Estructuras del sistema, elementos software, propiedades visibles y relaciones. La arquitectura describe estructuras del sistema, elementos software, propiedades visibles externamente y relaciones significativas."
     },
     {
       "id": "q034",
@@ -964,7 +966,7 @@ const APP_DATA = {
       "tags": [
         "requisitos no funcionales"
       ],
-      "explanation": "La respuesta correcta es: modela una solución a los requisitos no funcionales.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: modela una solución a los requisitos no funcionales. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "q036",
@@ -982,7 +984,7 @@ const APP_DATA = {
       "tags": [
         "escenarios de calidad"
       ],
-      "explanation": "La respuesta correcta es: una condición que debe ser considerada cuando llega a un sistema.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: una condición que debe ser considerada cuando llega a un sistema. Un escenario de calidad describe un estímulo y una respuesta medible esperada, haciendo verificable un atributo de calidad."
     },
     {
       "id": "q038",
@@ -1000,7 +1002,7 @@ const APP_DATA = {
       "tags": [
         "SAAM"
       ],
-      "explanation": "La respuesta correcta es: SAAM.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: SAAM. SAAM es un método de evaluación de arquitecturas basado en escenarios para valorar cómo responde una arquitectura ante cambios y requisitos."
     },
     {
       "id": "q039",
@@ -1018,7 +1020,7 @@ const APP_DATA = {
       "tags": [
         "ADD"
       ],
-      "explanation": "La respuesta correcta es: Top-down.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: Top-down. ADD es un método top-down de diseño guiado por atributos de calidad y escenarios, usado para elegir decisiones arquitectónicas que satisfagan esos objetivos."
     },
     {
       "id": "q041",
@@ -1036,7 +1038,7 @@ const APP_DATA = {
       "tags": [
         "feature flag"
       ],
-      "explanation": "La respuesta correcta es: Una característica que puede activarse o desactivarse para ciertos usuarios en tiempo de ejecución.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: Una característica que puede activarse o desactivarse para ciertos usuarios en tiempo de ejecución. Un feature flag permite activar o desactivar comportamiento en tiempo de ejecución sin cambiar ni redesplegar código."
     },
     {
       "id": "q042",
@@ -1054,7 +1056,7 @@ const APP_DATA = {
       "tags": [
         "release"
       ],
-      "explanation": "La respuesta correcta es: Una release suele ser publicada y las versiones internas del equipo.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: Una release suele ser publicada y las versiones internas del equipo. La clave es reconocer la práctica de laboratorio concreta y su propósito: automatizar, versionar, probar o desplegar con trazabilidad reproducible."
     },
     {
       "id": "q043",
@@ -1072,7 +1074,7 @@ const APP_DATA = {
       "tags": [
         "Maven"
       ],
-      "explanation": "La respuesta correcta es: initialize - compile - test - package se ejecutan en ese orden.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: initialize - compile - test - package se ejecutan en ese orden. En el ciclo por defecto de Maven, las fases se ejecutan en orden: initialize, compile, test y package, entre otras."
     },
     {
       "id": "q046",
@@ -1090,7 +1092,7 @@ const APP_DATA = {
       "tags": [
         "actores"
       ],
-      "explanation": "La respuesta correcta es: los actores se comunican mediante mensajes y no comparten recursos.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: los actores se comunican mediante mensajes y no comparten recursos. Un estilo define una familia de organización arquitectónica más amplia; los patrones suelen ser soluciones más concretas y pueden combinarse o depender de otros patrones."
     },
     {
       "id": "q047",
@@ -1108,7 +1110,7 @@ const APP_DATA = {
       "tags": [
         "Kafka"
       ],
-      "explanation": "La respuesta correcta es: Publish/subscribe.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: Publish/subscribe. Un estilo define una familia de organización arquitectónica más amplia; los patrones suelen ser soluciones más concretas y pueden combinarse o depender de otros patrones."
     },
     {
       "id": "q048",
@@ -1126,7 +1128,7 @@ const APP_DATA = {
       "tags": [
         "WMS"
       ],
-      "explanation": "La respuesta correcta es: WMS.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: WMS. WMS se orienta a la gestión de almacenes: inventario, ubicaciones, movimientos y logística interna."
     },
     {
       "id": "q049",
@@ -1144,7 +1146,7 @@ const APP_DATA = {
       "tags": [
         "vistas"
       ],
-      "explanation": "La respuesta correcta es: Los diagramas son o pueden ser parte de la documentación de la vista.. Las vistas, diagramas, C4, arc42 y ADR ayudan a comunicar arquitectura a distintos stakeholders."
+      "explanation": "La respuesta correcta es: Los diagramas son o pueden ser parte de la documentación de la vista. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
     },
     {
       "id": "q050",
@@ -1162,7 +1164,7 @@ const APP_DATA = {
       "tags": [
         "ABC"
       ],
-      "explanation": "La respuesta correcta es: asegurar que la aplicación se ajusta a la arquitectura.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: asegurar que la aplicación se ajusta a la arquitectura. ABC relaciona arquitectura y contexto de negocio; antes de implementar, se valida que la aplicación se ajusta a la arquitectura decidida."
     },
     {
       "id": "q052",
@@ -1180,7 +1182,7 @@ const APP_DATA = {
       "tags": [
         "Gorton"
       ],
-      "explanation": "La respuesta correcta es: Definir requisitos de arquitectura, diseñar y validar la arquitectura.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: Definir requisitos de arquitectura, diseñar y validar la arquitectura. El esquema simple de Gorton resume el trabajo en definir requisitos arquitectónicos, diseñar la arquitectura y validarla."
     },
     {
       "id": "q053",
@@ -1198,7 +1200,7 @@ const APP_DATA = {
       "tags": [
         "componentes"
       ],
-      "explanation": "La respuesta correcta es: componentes y conectores son elementos de ejecución y caminos de interacción.. Los estilos en tiempo de ejecución definen componentes, conectores y formas de interacción."
+      "explanation": "La respuesta correcta es: componentes y conectores son elementos de ejecución y caminos de interacción. Un estilo define una familia de organización arquitectónica más amplia; los patrones suelen ser soluciones más concretas y pueden combinarse o depender de otros patrones."
     },
     {
       "id": "q054",
@@ -1216,7 +1218,7 @@ const APP_DATA = {
       "tags": [
         "ADD"
       ],
-      "explanation": "La respuesta correcta es: Diseño basado en atributos de calidad que el software debe cumplir.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: Diseño basado en atributos de calidad que el software debe cumplir. ADD es un método top-down de diseño guiado por atributos de calidad y escenarios, usado para elegir decisiones arquitectónicas que satisfagan esos objetivos."
     },
     {
       "id": "q056",
@@ -1234,7 +1236,7 @@ const APP_DATA = {
       "tags": [
         "vistas"
       ],
-      "explanation": "La respuesta correcta es: vistas de descomposición.. Las vistas, diagramas, C4, arc42 y ADR ayudan a comunicar arquitectura a distintos stakeholders."
+      "explanation": "La respuesta correcta es: vistas de descomposición. En una vista de módulos se documentan relaciones estructurales como especialización, composición y dependencia."
     },
     {
       "id": "q057",
@@ -1252,7 +1254,7 @@ const APP_DATA = {
       "tags": [
         "CRM"
       ],
-      "explanation": "La respuesta correcta es: CRM.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: CRM. CRM gestiona relación con clientes, ventas, soporte, satisfacción y canales como call centers."
     },
     {
       "id": "q059",
@@ -1270,7 +1272,7 @@ const APP_DATA = {
       "tags": [
         "actores"
       ],
-      "explanation": "La respuesta correcta es: Akka.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: Akka. Akka es una tecnología asociada al modelo de actores para construir sistemas concurrentes y distribuidos."
     },
     {
       "id": "q061",
@@ -1288,7 +1290,7 @@ const APP_DATA = {
       "tags": [
         "línea de producto"
       ],
-      "explanation": "La respuesta correcta es: un conjunto de productos que comparten funcionalidades para un segmento de mercado.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: un conjunto de productos que comparten funcionalidades para un segmento de mercado. Una línea de producto comparte activos y soluciones genéricas para una familia de productos de un segmento de mercado."
     },
     {
       "id": "q062",
@@ -1306,7 +1308,7 @@ const APP_DATA = {
       "tags": [
         "despliegue"
       ],
-      "explanation": "La respuesta correcta es: mantener configuración, datos y código bajo control de versiones.. La disposición relaciona software e infraestructura: empaquetado, despliegue, observabilidad y operación."
+      "explanation": "La respuesta correcta es: mantener configuración, datos y código bajo control de versiones. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
     },
     {
       "id": "q067",
@@ -1324,7 +1326,7 @@ const APP_DATA = {
       "tags": [
         "escenarios de calidad"
       ],
-      "explanation": "La respuesta correcta es: una medida de la respuesta.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: una medida de la respuesta. La medida de respuesta convierte el atributo de calidad en algo evaluable, evitando afirmaciones vagas como rápido o fácil de mantener."
     },
     {
       "id": "q069",
@@ -1342,7 +1344,7 @@ const APP_DATA = {
       "tags": [
         "profiling"
       ],
-      "explanation": "La respuesta correcta es: informa sobre el uso de recursos durante la ejecución de un software.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: informa sobre el uso de recursos durante la ejecución de un software. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
     },
     {
       "id": "q070",
@@ -1360,7 +1362,7 @@ const APP_DATA = {
       "tags": [
         "canary release"
       ],
-      "explanation": "La respuesta correcta es: introducir nuevas versiones gradualmente a un subconjunto de usuarios.. La disposición relaciona software e infraestructura: empaquetado, despliegue, observabilidad y operación."
+      "explanation": "La respuesta correcta es: introducir nuevas versiones gradualmente a un subconjunto de usuarios. Canary release despliega una versión gradualmente a subconjuntos de usuarios para detectar problemas antes de generalizarla."
     },
     {
       "id": "q071",
@@ -1378,7 +1380,7 @@ const APP_DATA = {
       "tags": [
         "Conway"
       ],
-      "explanation": "La respuesta correcta es: las organizaciones producen sistemas que copian sus estructuras de comunicación.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: las organizaciones producen sistemas que copian sus estructuras de comunicación. La ley de Conway indica que las organizaciones tienden a producir sistemas que reflejan sus estructuras de comunicación."
     },
     {
       "id": "q072",
@@ -1396,7 +1398,7 @@ const APP_DATA = {
       "tags": [
         "peer-to-peer"
       ],
-      "explanation": "La respuesta correcta es: IPFS.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: IPFS. Un estilo define una familia de organización arquitectónica más amplia; los patrones suelen ser soluciones más concretas y pueden combinarse o depender de otros patrones."
     },
     {
       "id": "q073",
@@ -1414,7 +1416,7 @@ const APP_DATA = {
       "tags": [
         "batch"
       ],
-      "explanation": "La respuesta correcta es: acoplamiento débil entre componentes.. Los estilos en tiempo de ejecución definen componentes, conectores y formas de interacción."
+      "explanation": "La respuesta correcta es: acoplamiento débil entre componentes. Un estilo define una familia de organización arquitectónica más amplia; los patrones suelen ser soluciones más concretas y pueden combinarse o depender de otros patrones."
     },
     {
       "id": "q074",
@@ -1432,7 +1434,7 @@ const APP_DATA = {
       "tags": [
         "trade-offs"
       ],
-      "explanation": "La respuesta correcta es: Los atributos de calidad suelen entrar en compromiso entre sí.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: Los atributos de calidad suelen entrar en compromiso entre sí. Los atributos de calidad suelen entrar en tensión entre sí, por eso la arquitectura consiste en elegir compromisos explícitos."
     },
     {
       "id": "q075",
@@ -1450,7 +1452,7 @@ const APP_DATA = {
       "tags": [
         "chaos engineering"
       ],
-      "explanation": "La respuesta correcta es: inyecta fallos adrede en sistemas distribuidos para comprobar resiliencia.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: inyecta fallos adrede en sistemas distribuidos para comprobar resiliencia. Una ADR documenta contexto, decisión y consecuencias para conservar el razonamiento arquitectónico y no solo el resultado final."
     },
     {
       "id": "q076",
@@ -1468,7 +1470,7 @@ const APP_DATA = {
       "tags": [
         "WMS"
       ],
-      "explanation": "La respuesta correcta es: permite gestionar almacenes.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: permite gestionar almacenes. WMS se orienta a la gestión de almacenes: inventario, ubicaciones, movimientos y logística interna."
     },
     {
       "id": "q077",
@@ -1487,7 +1489,7 @@ const APP_DATA = {
         "BDD",
         "Gherkin"
       ],
-      "explanation": "La respuesta correcta es: es un lenguaje utilizado para definir historias de usuario.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: es un lenguaje utilizado para definir historias de usuario. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
     },
     {
       "id": "q079",
@@ -1505,7 +1507,7 @@ const APP_DATA = {
       "tags": [
         "escenarios de calidad"
       ],
-      "explanation": "La respuesta correcta es: describe qué debería ocurrir cuando llega un estímulo.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: describe qué debería ocurrir cuando llega un estímulo. Un escenario de calidad describe un estímulo y una respuesta medible esperada, haciendo verificable un atributo de calidad."
     },
     {
       "id": "q082",
@@ -1524,7 +1526,7 @@ const APP_DATA = {
         "MTBF",
         "MTTR"
       ],
-      "explanation": "La respuesta correcta es: son tiempo medio entre fallos y tiempo medio de recuperación.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: son tiempo medio entre fallos y tiempo medio de recuperación. MTBF es el tiempo medio entre fallos y MTTR el tiempo medio de recuperación; juntos permiten razonar sobre disponibilidad."
     },
     {
       "id": "q086",
@@ -1542,7 +1544,7 @@ const APP_DATA = {
       "tags": [
         "empresa"
       ],
-      "explanation": "La respuesta correcta es: hay compromiso entre departamento IT interno u outsourcing.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: hay compromiso entre departamento IT interno u outsourcing. La respuesta corresponde a la categoría o práctica empresarial definida en teoría; conviene distinguir propósito de negocio, proceso y tecnología usada."
     },
     {
       "id": "q089",
@@ -1560,7 +1562,7 @@ const APP_DATA = {
       "tags": [
         "Vitruvio"
       ],
-      "explanation": "La respuesta correcta es: Vitruvio en 15-30 a. C.. La arquitectura se centra en estructuras, elementos, relaciones, propiedades visibles y decisiones significativas."
+      "explanation": "La respuesta correcta es: Vitruvio en 15-30 a. C. Vitruvio formuló la tríada clásica de utilidad, durabilidad y belleza/elegancia, que se usa como analogía temprana de calidad arquitectónica."
     },
     {
       "id": "q090",
@@ -1578,7 +1580,7 @@ const APP_DATA = {
       "tags": [
         "steady state"
       ],
-      "explanation": "La respuesta correcta es: limpiar recursos del sistema automáticamente.. La disposición relaciona software e infraestructura: empaquetado, despliegue, observabilidad y operación."
+      "explanation": "La respuesta correcta es: limpiar recursos del sistema automáticamente. Una solución de steady state mantiene el sistema cerca de un estado operativo esperado, por ejemplo limpiando recursos automáticamente."
     },
     {
       "id": "q091",
@@ -1596,7 +1598,7 @@ const APP_DATA = {
       "tags": [
         "línea de producto"
       ],
-      "explanation": "La respuesta correcta es: identificar soluciones genéricas a problemas comunes de varios productos.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: identificar soluciones genéricas a problemas comunes de varios productos. Una línea de producto comparte activos y soluciones genéricas para una familia de productos de un segmento de mercado."
     },
     {
       "id": "q092",
@@ -1614,7 +1616,7 @@ const APP_DATA = {
       "tags": [
         "ADR"
       ],
-      "explanation": "La respuesta correcta es: inmutables.. Las vistas, diagramas, C4, arc42 y ADR ayudan a comunicar arquitectura a distintos stakeholders."
+      "explanation": "La respuesta correcta es: inmutables. Una ADR debe quedar inmutable una vez aceptada; si cambia el contexto, se crea otra ADR que deje trazabilidad de la nueva decisión."
     },
     {
       "id": "q093",
@@ -1632,7 +1634,7 @@ const APP_DATA = {
       "tags": [
         "microservicios"
       ],
-      "explanation": "La respuesta correcta es: replicando cada microservicio de forma independiente en diferentes nodos.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: replicando cada microservicio de forma independiente en diferentes nodos. La escalabilidad en microservicios se logra replicando y distribuyendo servicios de forma independiente según su carga."
     },
     {
       "id": "q095",
@@ -1650,7 +1652,7 @@ const APP_DATA = {
       "tags": [
         "REST"
       ],
-      "explanation": "La respuesta correcta es: es idempotente pero no segura.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: es idempotente pero no segura. En REST, PUT es idempotente porque repetir la actualización produce el mismo estado final, pero no es seguro porque puede modificar el recurso."
     },
     {
       "id": "q096",
@@ -1668,7 +1670,7 @@ const APP_DATA = {
       "tags": [
         "Wardley"
       ],
-      "explanation": "La respuesta correcta es: valor para el usuario frente a evolución.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: valor para el usuario frente a evolución. Los mapas de Wardley colocan valor para el usuario frente a evolución/madurez, ayudando a decidir estrategia de modernización."
     },
     {
       "id": "q097",
@@ -1686,7 +1688,7 @@ const APP_DATA = {
       "tags": [
         "npm"
       ],
-      "explanation": "La respuesta correcta es: el primero instala dependencias en node_modules.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: el primero instala dependencias en node_modules. npm install paquete instala la dependencia en el proyecto, dentro de node_modules; con -g la instalación es global en el entorno."
     },
     {
       "id": "q098",
@@ -1704,7 +1706,7 @@ const APP_DATA = {
       "tags": [
         "escenarios de calidad"
       ],
-      "explanation": "La respuesta correcta es: se definen estímulos, respuestas y medidas esperadas.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: se definen estímulos, respuestas y medidas esperadas. La medida de respuesta convierte el atributo de calidad en algo evaluable, evitando afirmaciones vagas como rápido o fácil de mantener."
     },
     {
       "id": "q099",
@@ -1722,7 +1724,7 @@ const APP_DATA = {
       "tags": [
         "Conway"
       ],
-      "explanation": "La respuesta correcta es: producen diseños que son copias de sus estructuras.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: producen diseños que son copias de sus estructuras. La ley de Conway indica que las organizaciones tienden a producir sistemas que reflejan sus estructuras de comunicación."
     },
     {
       "id": "q102",
@@ -1740,7 +1742,7 @@ const APP_DATA = {
       "tags": [
         "profiler"
       ],
-      "explanation": "La respuesta correcta es: profiler.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: profiler. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
     },
     {
       "id": "q103",
@@ -1758,7 +1760,7 @@ const APP_DATA = {
       "tags": [
         "WMS"
       ],
-      "explanation": "La respuesta correcta es: WMS.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: WMS. WMS se orienta a la gestión de almacenes: inventario, ubicaciones, movimientos y logística interna."
     },
     {
       "id": "q104",
@@ -1776,7 +1778,7 @@ const APP_DATA = {
       "tags": [
         "falacias"
       ],
-      "explanation": "La respuesta correcta es: La topología no cambia.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: La topología no cambia. Las falacias de la computación distribuida son suposiciones falsas como que la red es fiable, la latencia es cero o la topología no cambia."
     },
     {
       "id": "q105",
@@ -1794,7 +1796,7 @@ const APP_DATA = {
       "tags": [
         "disponibilidad"
       ],
-      "explanation": "La respuesta correcta es: puede calcularse a partir de MTTR y MTBF.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: puede calcularse a partir de MTTR y MTBF. MTBF es el tiempo medio entre fallos y MTTR el tiempo medio de recuperación; juntos permiten razonar sobre disponibilidad."
     },
     {
       "id": "q107",
@@ -1812,7 +1814,7 @@ const APP_DATA = {
       "tags": [
         "despliegue"
       ],
-      "explanation": "La respuesta correcta es: diagrama de despliegue.. La disposición relaciona software e infraestructura: empaquetado, despliegue, observabilidad y operación."
+      "explanation": "La respuesta correcta es: diagrama de despliegue. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
     },
     {
       "id": "q108",
@@ -1830,7 +1832,7 @@ const APP_DATA = {
       "tags": [
         "ADD"
       ],
-      "explanation": "La respuesta correcta es: es una metodología de creación de arquitecturas basada en atributos de calidad.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: es una metodología de creación de arquitecturas basada en atributos de calidad. ADD es un método top-down de diseño guiado por atributos de calidad y escenarios, usado para elegir decisiones arquitectónicas que satisfagan esos objetivos."
     },
     {
       "id": "q109",
@@ -1848,7 +1850,7 @@ const APP_DATA = {
       "tags": [
         "hexagonal"
       ],
-      "explanation": "La respuesta correcta es: un modelo de dominio independiente.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: un modelo de dominio independiente. La arquitectura hexagonal coloca el modelo de dominio en el núcleo y deja bases de datos, frameworks y adaptadores en el exterior para proteger la lógica del dominio."
     },
     {
       "id": "q110",
@@ -1866,7 +1868,7 @@ const APP_DATA = {
       "tags": [
         "CCD"
       ],
-      "explanation": "La respuesta correcta es: es una métrica para analizar dependencias entre componentes.. La modularidad busca bajo acoplamiento, alta cohesión, dependencias controladas y evolución independiente."
+      "explanation": "La respuesta correcta es: es una métrica para analizar dependencias entre componentes. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
     },
     {
       "id": "q113",
@@ -1884,7 +1886,7 @@ const APP_DATA = {
       "tags": [
         "actores"
       ],
-      "explanation": "La respuesta correcta es: ofrece una solución para sistemas con paralelismo.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: ofrece una solución para sistemas con paralelismo. En el modelo de actores, cada actor encapsula estado y se comunica mediante mensajes, evitando compartir memoria directamente."
     },
     {
       "id": "q114",
@@ -1902,7 +1904,7 @@ const APP_DATA = {
       "tags": [
         "CRP"
       ],
-      "explanation": "La respuesta correcta es: pueden aparecer muchas releases innecesarias.. La modularidad busca bajo acoplamiento, alta cohesión, dependencias controladas y evolución independiente."
+      "explanation": "La respuesta correcta es: pueden aparecer muchas releases innecesarias. CRP recomienda no obligar a depender de cosas que no se reutilizan; si falla, aparecen releases innecesarias para consumidores que no usan esos cambios."
     },
     {
       "id": "q116",
@@ -1921,7 +1923,7 @@ const APP_DATA = {
         "SLO",
         "error budget"
       ],
-      "explanation": "La respuesta correcta es: permite disponer de un error budget.. La disposición relaciona software e infraestructura: empaquetado, despliegue, observabilidad y operación."
+      "explanation": "La respuesta correcta es: permite disponer de un error budget. El error budget representa el margen de errores permitido por un SLO antes de priorizar fiabilidad sobre nuevas entregas."
     },
     {
       "id": "q117",
@@ -1939,7 +1941,7 @@ const APP_DATA = {
       "tags": [
         "Gatling"
       ],
-      "explanation": "La respuesta correcta es: Grabación de acciones en Gatling recorder.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: Grabación de acciones en Gatling recorder. Gatling Recorder puede requerir configurar el proxy para capturar acciones contra localhost durante la grabación."
     },
     {
       "id": "q119",
@@ -1957,7 +1959,7 @@ const APP_DATA = {
       "tags": [
         "DORA"
       ],
-      "explanation": "La respuesta correcta es: Lead time to change.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: Lead time to change. Lead time to change mide el tiempo desde que se confirma un cambio de código hasta que está en producción."
     },
     {
       "id": "q120",
@@ -1975,7 +1977,7 @@ const APP_DATA = {
       "tags": [
         "microservicios"
       ],
-      "explanation": "La respuesta correcta es: se usa una base de datos independiente para cada microservicio.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: se usa una base de datos independiente para cada microservicio. En microservicios se busca que cada servicio gestione sus propios datos para mantener autonomía y reducir acoplamiento."
     },
     {
       "id": "q122",
@@ -1993,7 +1995,7 @@ const APP_DATA = {
       "tags": [
         "flaky test"
       ],
-      "explanation": "La respuesta correcta es: un test que a veces pasa y a veces no sin cambios en el código.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: un test que a veces pasa y a veces no sin cambios en el código. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
     },
     {
       "id": "q123",
@@ -2011,7 +2013,7 @@ const APP_DATA = {
       "tags": [
         "configuración"
       ],
-      "explanation": "La respuesta correcta es: incluye el tratamiento de diferentes versiones del software.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: incluye el tratamiento de diferentes versiones del software. La gestión de configuración permite controlar versiones, cambios y evolución del software y sus artefactos, incluida configuración y dependencias."
     },
     {
       "id": "q124",
@@ -2029,7 +2031,7 @@ const APP_DATA = {
       "tags": [
         "stress tests"
       ],
-      "explanation": "La respuesta correcta es: son pruebas de carga que llevan el sistema al límite.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: son pruebas de carga que llevan el sistema al límite. Gatling es una herramienta usada para pruebas de carga y rendimiento."
     },
     {
       "id": "q126",
@@ -2047,7 +2049,7 @@ const APP_DATA = {
       "tags": [
         "CRM"
       ],
-      "explanation": "La respuesta correcta es: CRM.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: CRM. CRM gestiona relación con clientes, ventas, soporte, satisfacción y canales como call centers."
     },
     {
       "id": "q127",
@@ -2065,7 +2067,7 @@ const APP_DATA = {
       "tags": [
         "Conway"
       ],
-      "explanation": "La respuesta correcta es: evolucionar equipos para promover la arquitectura deseada.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: evolucionar equipos para promover la arquitectura deseada. La maniobra inversa de Conway ajusta la estructura de equipos para favorecer la arquitectura que se quiere conseguir."
     },
     {
       "id": "q129",
@@ -2083,7 +2085,7 @@ const APP_DATA = {
       "tags": [
         "inestabilidad"
       ],
-      "explanation": "La respuesta correcta es: fan-in y fan-out.. La modularidad busca bajo acoplamiento, alta cohesión, dependencias controladas y evolución independiente."
+      "explanation": "La respuesta correcta es: fan-in y fan-out. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
     },
     {
       "id": "q130",
@@ -2102,7 +2104,7 @@ const APP_DATA = {
         "REST",
         "code on demand"
       ],
-      "explanation": "La respuesta correcta es: código bajo demanda.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: código bajo demanda. Code on demand es la restricción opcional de REST que permite que el servidor envíe código ejecutable al cliente, por ejemplo JavaScript en una página web."
     },
     {
       "id": "q132",
@@ -2120,7 +2122,7 @@ const APP_DATA = {
       "tags": [
         "sidecar"
       ],
-      "explanation": "La respuesta correcta es: agrupar en un contenedor tareas periféricas como logging y configuración.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: agrupar en un contenedor tareas periféricas como logging y configuración. RUP estructura el proceso en cuatro fases: inicio, elaboración, construcción y transición; cada una reduce riesgos y madura el producto."
     },
     {
       "id": "q135",
@@ -2138,7 +2140,7 @@ const APP_DATA = {
       "tags": [
         "Dunning-Kruger"
       ],
-      "explanation": "La respuesta correcta es: gente con poco conocimiento sobreestima su capacidad.. Los seminarios aportan temas actuales que pueden aparecer como preguntas concretas de contexto."
+      "explanation": "La respuesta correcta es: gente con poco conocimiento sobreestima su capacidad. El efecto Dunning-Kruger describe la sobreestimación de la propia competencia cuando se tiene poco conocimiento; por eso es relevante al valorar decisiones y límites técnicos."
     },
     {
       "id": "q136",
@@ -2156,7 +2158,7 @@ const APP_DATA = {
       "tags": [
         "tácticas"
       ],
-      "explanation": "La respuesta correcta es: Las tácticas dependen del atributo de calidad.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: Las tácticas dependen del atributo de calidad. Una táctica arquitectónica es una decisión concreta para influir en un atributo de calidad, por ejemplo disponibilidad, rendimiento o modificabilidad."
     },
     {
       "id": "q138",
@@ -2174,7 +2176,7 @@ const APP_DATA = {
       "tags": [
         "conferencia DXC"
       ],
-      "explanation": "La respuesta correcta es: un principio de Assure es la automatización completa.. Los seminarios aportan temas actuales que pueden aparecer como preguntas concretas de contexto."
+      "explanation": "La respuesta correcta es: un principio de Assure es la automatización completa. La idea de Assure en la charla se apoya en automatizar controles y evidencias para reducir riesgo operativo, no en validaciones manuales aisladas."
     },
     {
       "id": "q140",
@@ -2192,7 +2194,7 @@ const APP_DATA = {
       "tags": [
         "Wardley"
       ],
-      "explanation": "La respuesta correcta es: se usan para analizar estrategias de modernización de arquitectura.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: se usan para analizar estrategias de modernización de arquitectura. Los mapas de Wardley colocan valor para el usuario frente a evolución/madurez, ayudando a decidir estrategia de modernización."
     },
     {
       "id": "q141",
@@ -2210,7 +2212,7 @@ const APP_DATA = {
       "tags": [
         "remote evaluation"
       ],
-      "explanation": "La respuesta correcta es: puede haber problemas de seguridad al enviar código a otro sistema para ejecutarlo.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: puede haber problemas de seguridad al enviar código a otro sistema para ejecutarlo. Ejecutar código recibido de otro sistema introduce riesgos de seguridad porque ese código puede ser malicioso o consumir recursos de forma no controlada."
     },
     {
       "id": "q143",
@@ -2228,7 +2230,7 @@ const APP_DATA = {
       "tags": [
         "mutation testing"
       ],
-      "explanation": "La respuesta correcta es: se cambia el código fuente para detectar si las pruebas capturan errores.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: se cambia el código fuente para detectar si las pruebas capturan errores. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
     },
     {
       "id": "q144",
@@ -2247,7 +2249,7 @@ const APP_DATA = {
         "GHCR",
         "GitHub Actions"
       ],
-      "explanation": "La respuesta correcta es: publicar imágenes Docker en GHCR mediante GitHub Actions.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: publicar imágenes Docker en GHCR mediante GitHub Actions. GitHub Actions define automatizaciones de CI/CD mediante ficheros YAML en .github/workflows, donde se describen eventos, jobs y pasos."
     },
     {
       "id": "q145",
@@ -2265,7 +2267,7 @@ const APP_DATA = {
       "tags": [
         "DORA"
       ],
-      "explanation": "La respuesta correcta es: desde un commit de código hasta que entra en producción.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: desde un commit de código hasta que entra en producción. Lead time to change mide el tiempo desde que se confirma un cambio de código hasta que está en producción."
     },
     {
       "id": "q147",
@@ -2283,7 +2285,7 @@ const APP_DATA = {
       "tags": [
         "rule-based systems"
       ],
-      "explanation": "La respuesta correcta es: promueven una base de conocimiento con conocimiento declarativo.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: promueven una base de conocimiento con conocimiento declarativo. En los sistemas basados en reglas, el conocimiento se expresa declarativamente en reglas separadas del motor de inferencia, lo que facilita que expertos del dominio lo mantengan."
     },
     {
       "id": "q149",
@@ -2301,7 +2303,7 @@ const APP_DATA = {
       "tags": [
         "definición"
       ],
-      "explanation": "La respuesta correcta es: Cada detalle interno de implementación de bajo nivel.. La arquitectura se centra en estructuras, elementos, relaciones, propiedades visibles y decisiones significativas."
+      "explanation": "La respuesta correcta es: Cada detalle interno de implementación de bajo nivel. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
     },
     {
       "id": "q151",
@@ -2319,7 +2321,7 @@ const APP_DATA = {
       "tags": [
         "ADR"
       ],
-      "explanation": "La respuesta correcta es: la decisión, contexto y consecuencias.. Las vistas, diagramas, C4, arc42 y ADR ayudan a comunicar arquitectura a distintos stakeholders."
+      "explanation": "La respuesta correcta es: la decisión, contexto y consecuencias. Una ADR documenta contexto, decisión y consecuencias para conservar el razonamiento arquitectónico y no solo el resultado final."
     },
     {
       "id": "q152",
@@ -2337,7 +2339,7 @@ const APP_DATA = {
       "tags": [
         "arquitecto"
       ],
-      "explanation": "La respuesta correcta es: hacer explícitas decisiones, riesgos y restricciones.. El arquitecto coordina intereses, restricciones, riesgos, trade-offs y decisiones técnicas relevantes."
+      "explanation": "La respuesta correcta es: hacer explícitas decisiones, riesgos y restricciones. El arquitecto explicita decisiones, riesgos, restricciones y compromisos para alinear el diseño con objetivos técnicos y de negocio."
     },
     {
       "id": "q153",
@@ -2355,7 +2357,7 @@ const APP_DATA = {
       "tags": [
         "escenario"
       ],
-      "explanation": "La respuesta correcta es: estímulo, fuente, entorno, artefacto, respuesta y medida.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: estímulo, fuente, entorno, artefacto, respuesta y medida. Un escenario completo identifica fuente del estímulo, estímulo, entorno, artefacto afectado, respuesta esperada y medida de esa respuesta."
     },
     {
       "id": "q154",
@@ -2373,7 +2375,7 @@ const APP_DATA = {
       "tags": [
         "disponibilidad"
       ],
-      "explanation": "La respuesta correcta es: MTBF y MTTR.. Los atributos de calidad son requisitos no funcionales medibles mediante escenarios, estímulos, respuestas y métricas."
+      "explanation": "La respuesta correcta es: MTBF y MTTR. MTBF es el tiempo medio entre fallos y MTTR el tiempo medio de recuperación; juntos permiten razonar sobre disponibilidad."
     },
     {
       "id": "q155",
@@ -2391,7 +2393,7 @@ const APP_DATA = {
       "tags": [
         "ATAM"
       ],
-      "explanation": "La respuesta correcta es: evaluar decisiones y trade-offs de arquitectura.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: evaluar decisiones y trade-offs de arquitectura. ATAM evalúa decisiones arquitectónicas a partir de atributos de calidad, sensibilidad, riesgos y trade-offs."
     },
     {
       "id": "q156",
@@ -2409,7 +2411,7 @@ const APP_DATA = {
       "tags": [
         "riesgos"
       ],
-      "explanation": "La respuesta correcta es: los riesgos que más amenazan objetivos y atributos de calidad.. ADD, SAAM, ATAM y ABC estructuran diseño, evaluación y validación de arquitecturas."
+      "explanation": "La respuesta correcta es: los riesgos que más amenazan objetivos y atributos de calidad. Un riesgo es algo negativo que podría ocurrir y todavía no ha ocurrido; en arquitectura se priorizan decisiones que reducen los riesgos más importantes."
     },
     {
       "id": "q157",
@@ -2427,7 +2429,7 @@ const APP_DATA = {
       "tags": [
         "tácticas"
       ],
-      "explanation": "La respuesta correcta es: son decisiones concretas orientadas a atributos de calidad.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: son decisiones concretas orientadas a atributos de calidad. Una táctica arquitectónica es una decisión concreta para influir en un atributo de calidad, por ejemplo disponibilidad, rendimiento o modificabilidad."
     },
     {
       "id": "q158",
@@ -2445,7 +2447,7 @@ const APP_DATA = {
       "tags": [
         "patrones"
       ],
-      "explanation": "La respuesta correcta es: sus fuerzas, contexto, consecuencias y trade-offs.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: sus fuerzas, contexto, consecuencias y trade-offs. Un patrón se entiende por su contexto, fuerzas, solución y consecuencias; estudiarlo sin sus trade-offs puede llevar a aplicarlo fuera de lugar."
     },
     {
       "id": "q159",
@@ -2463,7 +2465,7 @@ const APP_DATA = {
       "tags": [
         "ciclos"
       ],
-      "explanation": "La respuesta correcta es: dificulta evolución, pruebas y despliegue independiente.. La modularidad busca bajo acoplamiento, alta cohesión, dependencias controladas y evolución independiente."
+      "explanation": "La respuesta correcta es: dificulta evolución, pruebas y despliegue independiente. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
     },
     {
       "id": "q160",
@@ -2481,7 +2483,7 @@ const APP_DATA = {
       "tags": [
         "fan-in"
       ],
-      "explanation": "La respuesta correcta es: cuántos módulos dependen de él.. La modularidad busca bajo acoplamiento, alta cohesión, dependencias controladas y evolución independiente."
+      "explanation": "La respuesta correcta es: cuántos módulos dependen de él. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
     },
     {
       "id": "q162",
@@ -2499,7 +2501,7 @@ const APP_DATA = {
       "tags": [
         "REST"
       ],
-      "explanation": "La respuesta correcta es: sin estado entre cliente y servidor.. Los estilos en tiempo de ejecución definen componentes, conectores y formas de interacción."
+      "explanation": "La respuesta correcta es: sin estado entre cliente y servidor. REST combina cliente-servidor y ausencia de estado entre peticiones: cada solicitud debe contener la información necesaria para ser entendida por el servidor."
     },
     {
       "id": "q163",
@@ -2517,7 +2519,7 @@ const APP_DATA = {
       "tags": [
         "falacias"
       ],
-      "explanation": "La respuesta correcta es: la red no es fiable.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: la red no es fiable. Las falacias de la computación distribuida son suposiciones falsas como que la red es fiable, la latencia es cero o la topología no cambia."
     },
     {
       "id": "q164",
@@ -2535,7 +2537,7 @@ const APP_DATA = {
       "tags": [
         "microservicios"
       ],
-      "explanation": "La respuesta correcta es: reducir acoplamiento y permitir evolución autónoma.. Los sistemas distribuidos introducen latencia, fallos parciales, escalabilidad, consistencia y comunicación asíncrona."
+      "explanation": "La respuesta correcta es: reducir acoplamiento y permitir evolución autónoma. En microservicios se busca que cada servicio gestione sus propios datos para mantener autonomía y reducir acoplamiento."
     },
     {
       "id": "q165",
@@ -2553,7 +2555,7 @@ const APP_DATA = {
       "tags": [
         "despliegue"
       ],
-      "explanation": "La respuesta correcta es: dónde se ejecutan componentes y cómo se asignan a infraestructura.. La disposición relaciona software e infraestructura: empaquetado, despliegue, observabilidad y operación."
+      "explanation": "La respuesta correcta es: dónde se ejecutan componentes y cómo se asignan a infraestructura. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
     },
     {
       "id": "q166",
@@ -2571,7 +2573,7 @@ const APP_DATA = {
       "tags": [
         "ERP"
       ],
-      "explanation": "La respuesta correcta es: integrar procesos y recursos de la organización.. El software empresarial se entiende desde dominios, estrategia, producto, organización y tipos de sistemas corporativos."
+      "explanation": "La respuesta correcta es: integrar procesos y recursos de la organización. ERP integra procesos y recursos de la organización, como finanzas, compras, ventas, producción y operaciones."
     },
     {
       "id": "q167",
@@ -2589,7 +2591,7 @@ const APP_DATA = {
       "tags": [
         "GitHub"
       ],
-      "explanation": "La respuesta correcta es: proponer, revisar e integrar cambios.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: proponer, revisar e integrar cambios. Una pull request sirve para proponer cambios, revisarlos y finalmente integrarlos en la rama principal con trazabilidad."
     },
     {
       "id": "q170",
@@ -2607,7 +2609,7 @@ const APP_DATA = {
       "tags": [
         "GHCR"
       ],
-      "explanation": "La respuesta correcta es: registro de imágenes de contenedor de GitHub.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: registro de imágenes de contenedor de GitHub. GHCR es el registro de contenedores de GitHub; en la asignatura se usa para publicar imágenes Docker desde GitHub Actions."
     },
     {
       "id": "q171",
@@ -2625,7 +2627,7 @@ const APP_DATA = {
       "tags": [
         "build automation"
       ],
-      "explanation": "La respuesta correcta es: compilar, probar y empaquetar de forma repetible.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: compilar, probar y empaquetar de forma repetible. La automatización de construcción busca compilar, probar y empaquetar de forma repetible; Groovy es un lenguaje, no una herramienta de build por sí misma."
     },
     {
       "id": "q172",
@@ -2643,7 +2645,7 @@ const APP_DATA = {
       "tags": [
         "TDD"
       ],
-      "explanation": "La respuesta correcta es: rojo, verde, refactor.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: rojo, verde, refactor. En el modelo de actores, cada actor encapsula estado y se comunica mediante mensajes, evitando compartir memoria directamente."
     },
     {
       "id": "q173",
@@ -2661,7 +2663,7 @@ const APP_DATA = {
       "tags": [
         "GitHub Actions"
       ],
-      "explanation": "La respuesta correcta es: ficheros YAML dentro de .github/workflows.. Los laboratorios enfatizan Git, Docker, CI/CD, pruebas, calidad, automatización y despliegue reproducible."
+      "explanation": "La respuesta correcta es: ficheros YAML dentro de .github/workflows. GitHub Actions define automatizaciones de CI/CD mediante ficheros YAML en .github/workflows, donde se describen eventos, jobs y pasos."
     },
     {
       "id": "q174",
@@ -2679,7 +2681,7 @@ const APP_DATA = {
       "tags": [
         "OpenAPI"
       ],
-      "explanation": "La respuesta correcta es: describir contratos de APIs REST.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: describir contratos de APIs REST. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
     },
     {
       "id": "q175",
@@ -2697,7 +2699,7 @@ const APP_DATA = {
       "tags": [
         "BDD"
       ],
-      "explanation": "La respuesta correcta es: escenarios legibles por negocio y equipo técnico.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: escenarios legibles por negocio y equipo técnico. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
     },
     {
       "id": "q176",
@@ -2715,7 +2717,7 @@ const APP_DATA = {
       "tags": [
         "load tests"
       ],
-      "explanation": "La respuesta correcta es: comportamiento bajo volumen esperado o creciente de usuarios/peticiones.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: comportamiento bajo volumen esperado o creciente de usuarios/peticiones. Las pruebas de carga observan el comportamiento del sistema bajo volumen esperado o creciente de usuarios y peticiones."
     },
     {
       "id": "q177",
@@ -2733,7 +2735,7 @@ const APP_DATA = {
       "tags": [
         "monitoring"
       ],
-      "explanation": "La respuesta correcta es: observar el sistema en producción mediante métricas, logs y paneles.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: observar el sistema en producción mediante métricas, logs y paneles. Monitorizar observa el sistema en producción mediante métricas, logs y paneles para detectar estado y tendencias operativas."
     },
     {
       "id": "q178",
@@ -2751,7 +2753,7 @@ const APP_DATA = {
       "tags": [
         "observability"
       ],
-      "explanation": "La respuesta correcta es: logs, métricas y trazas.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: logs, métricas y trazas. Monitorizar observa el sistema en producción mediante métricas, logs y paneles para detectar estado y tendencias operativas."
     },
     {
       "id": "q180",
@@ -2769,7 +2771,7 @@ const APP_DATA = {
       "tags": [
         "API"
       ],
-      "explanation": "La respuesta correcta es: contratos claros, compatibilidad y evolución controlada.. Tácticas, estilos y patrones ofrecen soluciones recurrentes condicionadas por atributos de calidad."
+      "explanation": "La respuesta correcta es: contratos claros, compatibilidad y evolución controlada. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
     },
     {
       "id": "q181",
@@ -2787,7 +2789,7 @@ const APP_DATA = {
       "tags": [
         "observability"
       ],
-      "explanation": "La respuesta correcta es: formular y responder preguntas sobre el sistema sin redeploy.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: formular y responder preguntas sobre el sistema sin redeploy. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
     },
     {
       "id": "q182",
@@ -2805,7 +2807,7 @@ const APP_DATA = {
       "tags": [
         "testing"
       ],
-      "explanation": "La respuesta correcta es: reducir intervención manual y aumentar confianza en cambios.. Pruebas, profiling, monitorización y observabilidad reducen riesgo y aportan evidencia sobre el comportamiento del sistema."
+      "explanation": "La respuesta correcta es: reducir intervención manual y aumentar confianza en cambios. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
     },
     {
       "id": "q183",
@@ -2823,7 +2825,7 @@ const APP_DATA = {
       "tags": [
         "Rust"
       ],
-      "explanation": "La respuesta correcta es: seguridad de memoria sin garbage collector mediante ownership.. Los seminarios aportan temas actuales que pueden aparecer como preguntas concretas de contexto."
+      "explanation": "La respuesta correcta es: seguridad de memoria sin garbage collector mediante ownership. Rust se cita por ofrecer seguridad de memoria sin recolector de basura mediante ownership, préstamos y comprobaciones en compilación."
     },
     {
       "id": "q184",
@@ -2841,7 +2843,7 @@ const APP_DATA = {
       "tags": [
         "CLI"
       ],
-      "explanation": "La respuesta correcta es: mensajes claros, composición, ayuda y comportamiento predecible.. Los seminarios aportan temas actuales que pueden aparecer como preguntas concretas de contexto."
+      "explanation": "La respuesta correcta es: mensajes claros, composición, ayuda y comportamiento predecible. Una CLI moderna debe ser predecible, composable y clara en ayuda, errores y salidas para integrarse bien en flujos automatizados."
     },
     {
       "id": "q185",
@@ -2859,7 +2861,7 @@ const APP_DATA = {
       "tags": [
         "readiness"
       ],
-      "explanation": "La respuesta correcta es: preparar el sistema para operar, desplegar y responder a incidentes.. La disposición relaciona software e infraestructura: empaquetado, despliegue, observabilidad y operación."
+      "explanation": "La respuesta correcta es: preparar el sistema para operar, desplegar y responder a incidentes. Readiness se relaciona con preparar el sistema para operar, desplegar, observar y responder a incidentes de forma fiable."
     },
     {
       "id": "q186",
@@ -2877,7 +2879,7 @@ const APP_DATA = {
       "tags": [
         "code health"
       ],
-      "explanation": "La respuesta correcta es: mantener salud del código y detectar degradación técnica.. La modularidad busca bajo acoplamiento, alta cohesión, dependencias controladas y evolución independiente."
+      "explanation": "La respuesta correcta es: mantener salud del código y detectar degradación técnica. Code health guardians busca vigilar salud del código y detectar degradación técnica antes de que bloquee evolución."
     },
     {
       "id": "q187",
@@ -2895,7 +2897,7 @@ const APP_DATA = {
       "tags": [
         "AI native"
       ],
-      "explanation": "La respuesta correcta es: datos, observabilidad, costes, latencia y operación de sistemas con IA.. Los seminarios aportan temas actuales que pueden aparecer como preguntas concretas de contexto."
+      "explanation": "La respuesta correcta es: datos, observabilidad, costes, latencia y operación de sistemas con IA. La nube facilita acceso bajo demanda a recursos que serían caros o lentos de adquirir en infraestructura propia."
     },
     {
       "id": "q188",
@@ -2913,7 +2915,7 @@ const APP_DATA = {
       "tags": [
         "restricciones"
       ],
-      "explanation": "La respuesta correcta es: hacer explícitas restricciones que guían decisiones y trade-offs.. El arquitecto coordina intereses, restricciones, riesgos, trade-offs y decisiones técnicas relevantes."
+      "explanation": "La respuesta correcta es: hacer explícitas restricciones que guían decisiones y trade-offs. Las restricciones limitan alternativas posibles; hacerlas explícitas evita evaluar opciones inviables y aclara trade-offs."
     },
     {
       "id": "k001",
@@ -2933,7 +2935,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Everything in software architecture is a trade-off. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Everything in software architecture is a trade-off. La primera ley resalta que toda decisión arquitectónica implica un trade-off: mejorar un atributo suele afectar a otros."
     },
     {
       "id": "k002",
@@ -2953,7 +2955,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Quality attributes or non-functional requirements. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Quality attributes or non-functional requirements. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k003",
@@ -2973,7 +2975,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: good to be identified because they limit alternatives to consider. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: good to be identified because they limit alternatives to consider. Las restricciones limitan alternativas posibles; hacerlas explícitas evita evaluar opciones inviables y aclara trade-offs."
     },
     {
       "id": "k004",
@@ -2993,7 +2995,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: are people interested in the project. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: are people interested in the project. Los stakeholders son personas o grupos interesados o afectados por el proyecto, y sus preocupaciones guían requisitos y decisiones."
     },
     {
       "id": "k005",
@@ -3013,7 +3015,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: is a new project. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: is a new project. Greenfield describe un proyecto nuevo, sin tener que partir de un sistema existente."
     },
     {
       "id": "k006",
@@ -3033,7 +3035,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Yes, when software architecture can react to environment changes. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Yes, when software architecture can react to environment changes. La arquitectura ágil existe cuando las decisiones arquitectónicas pueden adaptarse a cambios del entorno sin perder coherencia."
     },
     {
       "id": "k007",
@@ -3053,7 +3055,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Vitruvius, approx. 30BC. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Vitruvius, approx. 30BC. Vitruvio formuló la tríada clásica de utilidad, durabilidad y belleza/elegancia, que se usa como analogía temprana de calidad arquitectónica."
     },
     {
       "id": "k008",
@@ -3073,7 +3075,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Is a problem because it can generate too many unneeded docs or diagrams. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Is a problem because it can generate too many unneeded docs or diagrams. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
     },
     {
       "id": "k009",
@@ -3093,7 +3095,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Why is more important than how. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Why is more important than how. La segunda ley enfatiza registrar por qué se decidió algo; el razonamiento suele ser más valioso que el mecanismo concreto."
     },
     {
       "id": "k010",
@@ -3113,7 +3115,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Are an input that the software architect can take into account. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Are an input that the software architect can take into account. Los requisitos funcionales son una entrada para el arquitecto, aunque las decisiones estructurales suelen estar dominadas por atributos de calidad y restricciones."
     },
     {
       "id": "k011",
@@ -3133,7 +3135,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: ...a list of possible quality attributes. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: a list of possible quality attributes. ISO 25010 ofrece un modelo de atributos de calidad que sirve como catálogo para pensar requisitos no funcionales."
     },
     {
       "id": "k012",
@@ -3153,7 +3155,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Is a view. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Is a view. Una vista arquitectónica es una representación del sistema orientada a preocupaciones concretas de los stakeholders."
     },
     {
       "id": "k013",
@@ -3173,7 +3175,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Yes, but it is recommended to record them, even with a photo. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Yes, but it is recommended to record them, even with a photo. Un boceto puede documentar una vista si se conserva de forma trazable, incluso con una foto, porque lo importante es comunicar la preocupación arquitectónica."
     },
     {
       "id": "k014",
@@ -3193,7 +3195,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Architecture Description Language. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Architecture Description Language. Un ADL es un lenguaje de descripción de arquitecturas pensado para representar componentes, conectores, configuraciones y restricciones."
     },
     {
       "id": "k015",
@@ -3213,7 +3215,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: 5+1 model from Kruchten. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: 5+1 model from Kruchten. El modelo conocido de Kruchten es 4+1 vistas; por eso 5+1 no es la propuesta estándar de documentación arquitectónica."
     },
     {
       "id": "k016",
@@ -3233,7 +3235,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Are projects that change existing systems. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Are projects that change existing systems. Brownfield describe cambios sobre sistemas existentes, donde restricciones y deuda previa condicionan la arquitectura."
     },
     {
       "id": "k017",
@@ -3253,7 +3255,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Two: the business context is mandatory and the technical context optional. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Two: the business context is mandatory and the technical context optional. arc42 contempla contexto de negocio y contexto técnico: el primero es obligatorio y el segundo puede añadirse cuando aporta claridad."
     },
     {
       "id": "k018",
@@ -3273,7 +3275,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Can contain several black and white box diagrams combined. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Can contain several black and white box diagrams combined. La vista de bloques de construcción de arc42 puede combinar diagramas de caja blanca y caja negra para describir composición interna y límites."
     },
     {
       "id": "k019",
@@ -3293,7 +3295,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Using quality scenarios. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Using quality scenarios. Un escenario de calidad describe un estímulo y una respuesta medible esperada, haciendo verificable un atributo de calidad."
     },
     {
       "id": "k020",
@@ -3313,7 +3315,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Master builder. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Master builder. Etimológicamente, arquitecto se asocia a maestro constructor: alguien que coordina visión, estructura y ejecución."
     },
     {
       "id": "k021",
@@ -3333,7 +3335,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: The first 3 sections describe the problem and the next 8 the solution. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: The first 3 sections describe the problem and the next 8 the solution. En arc42, las primeras secciones enmarcan el problema y las restantes desarrollan la solución arquitectónica."
     },
     {
       "id": "k022",
@@ -3353,7 +3355,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Contains requirements overview, quality goals and stakeholders. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Contains requirements overview, quality goals and stakeholders. La primera sección de arc42 resume requisitos, objetivos de calidad y stakeholders para fijar el contexto del diseño."
     },
     {
       "id": "k023",
@@ -3373,7 +3375,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Describes the constraints. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Describes the constraints. La segunda sección de arc42 recoge restricciones, porque limitan las alternativas arquitectónicas posibles."
     },
     {
       "id": "k024",
@@ -3393,7 +3395,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: Contains a mapping from software building blocks to infrastructure. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Contains a mapping from software building blocks to infrastructure. La vista de bloques de construcción de arc42 puede combinar diagramas de caja blanca y caja negra para describir composición interna y límites."
     },
     {
       "id": "k025",
@@ -3413,7 +3415,7 @@ const APP_DATA = {
         "kahoot",
         "Definitions"
       ],
-      "explanation": "La respuesta correcta es: There is a specific section for risks and technical debt. Esta pregunta procede de los Kahoots de clase (Definitions); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: There is a specific section for risks and technical debt. arc42 reserva espacio para riesgos y deuda técnica, haciendo explícitos compromisos y problemas conocidos."
     },
     {
       "id": "k026",
@@ -3433,7 +3435,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Move things he doesn't know to things he knows doesn't know. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Move things he doesn't know to things he knows doesn't know. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k027",
@@ -3453,7 +3455,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: More technical breadth than technical depth. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: More technical breadth than technical depth. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k028",
@@ -3473,7 +3475,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Humility, trust and respect. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Humility, trust and respect. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k029",
@@ -3493,7 +3495,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Are people interested in the project. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Are people interested in the project. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k030",
@@ -3513,7 +3515,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Number of people that need to get hit by a bus before a project is doomed. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Number of people that need to get hit by a bus before a project is doomed. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k031",
@@ -3533,7 +3535,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Control freak and armchair architect. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Control freak and armchair architect. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k032",
@@ -3553,7 +3555,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: produce designs that are copies of their communication structures. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: produce designs that are copies of their communication structures. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k033",
@@ -3573,7 +3575,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Evolve teams to promote the desired architecture. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Evolve teams to promote the desired architecture. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k034",
@@ -3593,7 +3595,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Difference between group potential and actual productivity. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Difference between group potential and actual productivity. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k035",
@@ -3613,7 +3615,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Everyone publicly agrees in something but privately disagrees. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Everyone publicly agrees in something but privately disagrees. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k036",
@@ -3633,7 +3635,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: It is not clear who is responsible of what. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: It is not clear who is responsible of what. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k037",
@@ -3653,7 +3655,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Can be contradictory. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Can be contradictory. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
     },
     {
       "id": "k038",
@@ -3673,7 +3675,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: qualify the functionality. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: qualify the functionality. Los atributos de calidad califican cómo se comporta la funcionalidad: rendimiento, disponibilidad, seguridad, modificabilidad, etc."
     },
     {
       "id": "k039",
@@ -3693,7 +3695,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Is a meeting with stakeholders to identify quality attributes. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Is a meeting with stakeholders to identify quality attributes. Un taller de atributos de calidad reúne stakeholders para identificar, concretar y priorizar atributos mediante escenarios."
     },
     {
       "id": "k040",
@@ -3713,7 +3715,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: A mindmap diagram. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A mindmap diagram. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
     },
     {
       "id": "k041",
@@ -3733,7 +3735,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: A lot of quality attributes have vague meanings. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A lot of quality attributes have vague meanings. Muchos atributos de calidad son vagos si no se concretan con escenarios y medidas verificables."
     },
     {
       "id": "k042",
@@ -3753,7 +3755,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: A degree to which a system satisfies some needs. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A degree to which a system satisfies some needs. La calidad del sistema expresa el grado en que satisface necesidades explícitas e implícitas en un contexto."
     },
     {
       "id": "k043",
@@ -3773,7 +3775,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: A stimulus and a measurable response to it. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A stimulus and a measurable response to it. Un escenario de calidad describe un estímulo y una respuesta medible esperada, haciendo verificable un atributo de calidad."
     },
     {
       "id": "k044",
@@ -3793,7 +3795,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Scenarios of use, change and failure. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Scenarios of use, change and failure. Los escenarios suelen clasificarse por uso, cambio y fallo para cubrir operación normal, evolución y resiliencia."
     },
     {
       "id": "k045",
@@ -3813,7 +3815,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: ...prioritized according to the importance for success and their difficulty. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: prioritized according to the importance for success and their difficulty. Los escenarios se priorizan por importancia para el éxito y dificultad, para dirigir el esfuerzo arquitectónico donde más impacto tiene."
     },
     {
       "id": "k046",
@@ -3833,7 +3835,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: ...is divided in 2 dimensions: product quality and quality in use. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: is divided in 2 dimensions: product quality and quality in use. ISO 25010 distingue calidad del producto y calidad en uso, separando propiedades del sistema de la experiencia en contexto real."
     },
     {
       "id": "k047",
@@ -3853,7 +3855,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Are mean time between failures and mean time to recover. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Are mean time between failures and mean time to recover. MTBF es el tiempo medio entre fallos y MTTR el tiempo medio de recuperación; juntos permiten razonar sobre disponibilidad."
     },
     {
       "id": "k048",
@@ -3873,7 +3875,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Is a measure of code complexity. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Is a measure of code complexity. La complejidad ciclomática de McCabe mide caminos independientes en el código y se usa como indicador objetivo de complejidad."
     },
     {
       "id": "k049",
@@ -3893,7 +3895,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: a fitness function is defined to measure quality attributes. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: a fitness function is defined to measure quality attributes. En arquitectura evolutiva, una fitness function mide de forma continua si una propiedad arquitectónica deseada se mantiene."
     },
     {
       "id": "k050",
@@ -3913,7 +3915,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Are objective metrics of some software quality aspects. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Are objective metrics of some software quality aspects. La programación orientada a aspectos encapsula preocupaciones transversales, como logging o seguridad, y favorece su reutilización sin dispersarlas por muchos módulos."
     },
     {
       "id": "k051",
@@ -3933,7 +3935,7 @@ const APP_DATA = {
         "kahoot",
         "Stakeholders and Quality Attributes"
       ],
-      "explanation": "La respuesta correcta es: Cyclomatic complexity. Esta pregunta procede de los Kahoots de clase (Stakeholders and Quality Attributes); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Cyclomatic complexity. La complejidad ciclomática de McCabe mide caminos independientes en el código y se usa como indicador objetivo de complejidad."
     },
     {
       "id": "k052",
@@ -3953,7 +3955,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: Is a technique to evaluate architectures using quality attributes. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Is a technique to evaluate architectures using quality attributes. ATAM evalúa decisiones arquitectónicas a partir de atributos de calidad, sensibilidad, riesgos y trade-offs."
     },
     {
       "id": "k053",
@@ -3973,7 +3975,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: quantifies costs and benefits of architecture strategies. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: quantifies costs and benefits of architecture strategies. CBAM complementa la evaluación arquitectónica cuantificando costes y beneficios de estrategias para priorizar decisiones."
     },
     {
       "id": "k054",
@@ -3993,7 +3995,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: Depend on some quality attribute. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Depend on some quality attribute. Una táctica arquitectónica es una decisión concreta para influir en un atributo de calidad, por ejemplo disponibilidad, rendimiento o modificabilidad."
     },
     {
       "id": "k055",
@@ -4013,7 +4015,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: Immutable. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Immutable. Una ADR debe quedar inmutable una vez aceptada; si cambia el contexto, se crea otra ADR que deje trazabilidad de la nueva decisión."
     },
     {
       "id": "k056",
@@ -4033,7 +4035,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: methodology to create architectures based on quality attributes. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: methodology to create architectures based on quality attributes. ADD es un método top-down de diseño guiado por atributos de calidad y escenarios, usado para elegir decisiones arquitectónicas que satisfagan esos objetivos."
     },
     {
       "id": "k057",
@@ -4053,7 +4055,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: A risk. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A risk. Un riesgo es algo negativo que podría ocurrir y todavía no ha ocurrido; en arquitectura se priorizan decisiones que reducen los riesgos más importantes."
     },
     {
       "id": "k058",
@@ -4073,7 +4075,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: Can be of several types: code, design, documentation.... Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Can be of several types: code, design, documentation. La deuda t?cnica es una decisi?n o compromiso que acelera ahora pero genera coste futuro; puede aparecer en c?digo, dise?o, documentaci?n o pruebas."
     },
     {
       "id": "k059",
@@ -4093,7 +4095,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: Architecturally evident code. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Architecturally evident code. El código arquitectónicamente evidente ayuda a que la estructura real refleje las decisiones previstas y reduce la erosión entre diseño e implementación."
     },
     {
       "id": "k060",
@@ -4113,7 +4115,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: That styles are independent between each other and patterns aren't. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: That styles are independent between each other and patterns aren't. Un estilo define una familia de organización arquitectónica más amplia; los patrones suelen ser soluciones más concretas y pueden combinarse o depender de otros patrones."
     },
     {
       "id": "k061",
@@ -4133,7 +4135,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: Refers to existing commercial software. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Refers to existing commercial software. COTS significa Commercial Off-The-Shelf: software comercial ya existente que se incorpora en lugar de desarrollarlo desde cero."
     },
     {
       "id": "k062",
@@ -4153,7 +4155,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: creates acceptance tests from user stories. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: creates acceptance tests from user stories. BDD deriva pruebas de aceptación a partir de historias y escenarios compartidos entre negocio y desarrollo."
     },
     {
       "id": "k063",
@@ -4173,7 +4175,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: tests that are Fast, Independent, Repeatable, Self-checking and Timely. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: tests that are Fast, Independent, Repeatable, Self-checking and Timely. FIRST resume propiedades deseables de tests: rápidos, independientes, repetibles, autoevaluables y escritos a tiempo."
     },
     {
       "id": "k064",
@@ -4193,7 +4195,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: automates tests execution in external environments. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: automates tests execution in external environments. La integración continua automatiza la ejecución de pruebas y comprobaciones en entornos externos cada vez que se integran cambios."
     },
     {
       "id": "k065",
@@ -4213,7 +4215,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: Enables to observe software evolution. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Enables to observe software evolution. La gestión de configuración permite controlar versiones, cambios y evolución del software y sus artefactos, incluida configuración y dependencias."
     },
     {
       "id": "k066",
@@ -4233,7 +4235,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: 9. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: 9. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
     },
     {
       "id": "k067",
@@ -4253,7 +4255,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: 13. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: 13. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
     },
     {
       "id": "k068",
@@ -4273,7 +4275,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: Git. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Git. Git es un sistema de control de versiones distribuido: cada clon conserva historial y permite trabajar localmente antes de sincronizar con remotos."
     },
     {
       "id": "k069",
@@ -4293,7 +4295,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: You expect new functionality compatible with previous one. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: You expect new functionality compatible with previous one. En versionado semántico, aumentar MINOR indica funcionalidad nueva compatible con versiones anteriores; PATCH corrige y MAJOR rompe compatibilidad."
     },
     {
       "id": "k070",
@@ -4313,7 +4315,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: origin. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: origin. En Git, origin es el nombre remoto que normalmente apunta al repositorio desde el que se clonó por primera vez."
     },
     {
       "id": "k071",
@@ -4333,7 +4335,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: checkout. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: checkout. git checkout permite cambiar de rama o restaurar contenido; en estos test se usa como comando clásico para moverse entre ramas."
     },
     {
       "id": "k072",
@@ -4353,7 +4355,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: groovy. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: groovy. La automatización de construcción busca compilar, probar y empaquetar de forma repetible; Groovy es un lenguaje, no una herramienta de build por sí misma."
     },
     {
       "id": "k073",
@@ -4373,7 +4375,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: Are XML files. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Are XML files. Maven configura proyectos mediante ficheros XML, típicamente pom.xml, donde se declaran dependencias, plugins y ciclo de vida."
     },
     {
       "id": "k074",
@@ -4393,7 +4395,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: package.json file. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: package.json file. npm declara dependencias en package.json; node_modules contiene las dependencias instaladas localmente."
     },
     {
       "id": "k075",
@@ -4413,7 +4415,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: The first installs dependencies in node_modules folder. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: The first installs dependencies in node_modules folder. npm install paquete instala la dependencia en el proyecto, dentro de node_modules; con -g la instalación es global en el entorno."
     },
     {
       "id": "k076",
@@ -4433,7 +4435,7 @@ const APP_DATA = {
         "kahoot",
         "Tactics building"
       ],
-      "explanation": "La respuesta correcta es: A lot of time passes without integrating code from developers. Esta pregunta procede de los Kahoots de clase (Tactics building); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A lot of time passes without integrating code from developers. Integration hell aparece cuando los desarrolladores pasan demasiado tiempo sin integrar, acumulando conflictos y sorpresas al unir el código."
     },
     {
       "id": "k077",
@@ -4453,7 +4455,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: a few developers \"prestigious\" developers know where to touch. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: a few developers \"prestigious\" developers know where to touch. Big Ball of Mud sacrifica estructura arquitectónica: puede acelerar el arranque, pero aumenta la dificultad de cambio y concentra conocimiento en pocas personas."
     },
     {
       "id": "k078",
@@ -4473,7 +4475,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Yes, time-to-market and low initial cost. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Yes, time-to-market and low initial cost. Big Ball of Mud sacrifica estructura arquitectónica: puede acelerar el arranque, pero aumenta la dificultad de cambio y concentra conocimiento en pocas personas."
     },
     {
       "id": "k079",
@@ -4493,7 +4495,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: There must not be more than one reason to change a module. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: There must not be more than one reason to change a module. El principio Open/Closed indica que un módulo debería poder extenderse sin modificar su código existente, reduciendo el riesgo de introducir regresiones."
     },
     {
       "id": "k080",
@@ -4513,7 +4515,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Subtypes must follow supertypes contract. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Subtypes must follow supertypes contract. El principio de sustitución de Liskov exige que los subtipos respeten el contrato del supertipo para poder reemplazarlo sin romper clientes."
     },
     {
       "id": "k081",
@@ -4533,7 +4535,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Clients must not depend on methods that they don't use. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Clients must not depend on methods that they don't use. La segregación de interfaces evita obligar a los clientes a depender de métodos que no usan, reduciendo acoplamiento accidental."
     },
     {
       "id": "k082",
@@ -4553,7 +4555,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: High level modules must not depend on low level modules. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: High level modules must not depend on low level modules. La inversión de dependencias hace que los módulos de alto nivel dependan de abstracciones y no de detalles de bajo nivel."
     },
     {
       "id": "k083",
@@ -4573,7 +4575,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: High cohesion and low coupling. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: High cohesion and low coupling. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
     },
     {
       "id": "k084",
@@ -4593,7 +4595,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: The lower value, the better because it means more cohesion. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: The lower value, the better because it means more cohesion. LCOM mide falta de cohesión: valores más bajos indican que los métodos y datos de la clase están más relacionados entre sí."
     },
     {
       "id": "k085",
@@ -4613,7 +4615,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: 1. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: 1. LCOM mide falta de cohesión: valores más bajos indican que los métodos y datos de la clase están más relacionados entre sí."
     },
     {
       "id": "k086",
@@ -4633,7 +4635,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Equivalence between unit of reuse and unit of release. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Equivalence between unit of reuse and unit of release. REP relaciona la unidad de reutilización con la unidad de release: lo que se reutiliza junto debería versionarse y publicarse junto."
     },
     {
       "id": "k087",
@@ -4653,7 +4655,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Gather in a module entity that change for the same reason. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Gather in a module entity that change for the same reason. CCP agrupa en un componente elementos que cambian por la misma razón, reduciendo cambios dispersos."
     },
     {
       "id": "k088",
@@ -4673,7 +4675,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Too many unneeded releases. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Too many unneeded releases. CRP recomienda no obligar a depender de cosas que no se reutilizan; si falla, aparecen releases innecesarias para consumidores que no usan esos cambios."
     },
     {
       "id": "k089",
@@ -4693,7 +4695,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: A component should depend on more stable components. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A component should depend on more stable components. SDP recomienda depender de componentes más estables para que los cambios en piezas volátiles no arrastren a módulos que deberían permanecer sólidos."
     },
     {
       "id": "k090",
@@ -4713,7 +4715,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: I(B)=0.5, I(C)=0. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: I(B)=0.5, I(C)=0. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
     },
     {
       "id": "k091",
@@ -4733,7 +4735,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Modules that are abstract and unstable. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Modules that are abstract and unstable. La zona de inutilidad combina abstracción alta con inestabilidad: el módulo es abstracto pero no aporta una base estable para otros."
     },
     {
       "id": "k092",
@@ -4753,7 +4755,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: a change in one forces a change in the other to keep the system correct. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: a change in one forces a change in the other to keep the system correct. El conacimiento aparece cuando un cambio en un elemento obliga a cambiar otro para mantener la corrección; cuanto más fuerte o lejano, peor para la evolución."
     },
     {
       "id": "k093",
@@ -4773,7 +4775,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: A module be liberal in what it accepts and conservative in what sends. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A module be liberal in what it accepts and conservative in what sends. El principio de robustez de Postel recomienda aceptar entradas con flexibilidad y emitir salidas estrictas para mejorar interoperabilidad sin propagar ambigüedad."
     },
     {
       "id": "k094",
@@ -4793,7 +4795,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: that a module invokes elements from nearby modules. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: that a module invokes elements from nearby modules. La ley de Demeter limita las llamadas a colaboradores cercanos para reducir acoplamiento estructural entre módulos."
     },
     {
       "id": "k095",
@@ -4813,7 +4815,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Layer N can access elements in layers N - 1 to 1. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Layer N can access elements in layers N - 1 to 1. En capas laxas, una capa puede saltar a capas inferiores no adyacentes; aumenta flexibilidad, pero debilita el aislamiento estricto."
     },
     {
       "id": "k096",
@@ -4833,7 +4835,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Logging. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Logging. La programación orientada a aspectos encapsula preocupaciones transversales, como logging o seguridad, y favorece su reutilización sin dispersarlas por muchos módulos."
     },
     {
       "id": "k097",
@@ -4853,7 +4855,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: An ubiquitous language between domain experts and developers. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: An ubiquitous language between domain experts and developers. DDD busca alinear software y dominio mediante un lenguaje ubicuo compartido entre expertos de negocio y desarrolladores."
     },
     {
       "id": "k098",
@@ -4873,7 +4875,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: value objects are immutable. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: value objects are immutable. En DDD, los value objects se tratan como inmutables y se comparan por sus valores, no por identidad propia."
     },
     {
       "id": "k099",
@@ -4893,7 +4895,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Hexagonal architecture and clean architecture. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Hexagonal architecture and clean architecture. La arquitectura hexagonal coloca el modelo de dominio en el núcleo y deja bases de datos, frameworks y adaptadores en el exterior para proteger la lógica del dominio."
     },
     {
       "id": "k100",
@@ -4913,7 +4915,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Application is automatically generated from domain objects. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Application is automatically generated from domain objects. Naked Objects propone derivar la aplicación directamente de objetos de dominio, reduciendo capas manuales de interfaz alrededor del modelo."
     },
     {
       "id": "k101",
@@ -4933,7 +4935,7 @@ const APP_DATA = {
         "kahoot",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Databases and frameworks are external. Esta pregunta procede de los Kahoots de clase (Modularity); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Databases and frameworks are external. La arquitectura hexagonal coloca el modelo de dominio en el núcleo y deja bases de datos, frameworks y adaptadores en el exterior para proteger la lógica del dominio."
     },
     {
       "id": "k102",
@@ -4953,7 +4955,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: Low coupling. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Low coupling. Batch desacopla productores y consumidores al procesar lotes de datos; gana simplicidad y acoplamiento débil a costa de menor interacción."
     },
     {
       "id": "k103",
@@ -4973,7 +4975,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: filters can be executed concurrently. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: filters can be executed concurrently. Los filtros pueden ejecutarse de forma concurrente porque cada uno transforma flujos con interfaces relativamente uniformes."
     },
     {
       "id": "k104",
@@ -4993,7 +4995,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: consumers receive more data than they can process. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: consumers receive more data than they can process. Backpressure aparece cuando los consumidores reciben más datos de los que pueden procesar y necesitan regular el flujo."
     },
     {
       "id": "k105",
@@ -5013,7 +5015,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: Reconfigurability. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Reconfigurability. La interfaz uniforme en Pipes and Filters facilita reordenar, sustituir o reutilizar filtros sin acoplarlos demasiado."
     },
     {
       "id": "k106",
@@ -5033,7 +5035,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: Parallel computing. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Parallel computing. Master-slave facilita computación paralela al repartir trabajo desde un coordinador a trabajadores, aunque introduce dependencia del coordinador."
     },
     {
       "id": "k107",
@@ -5053,7 +5055,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: It is easier to create new controllers and views. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: It is easier to create new controllers and views. Una vista arquitectónica es una representación del sistema orientada a preocupaciones concretas de los stakeholders."
     },
     {
       "id": "k108",
@@ -5073,7 +5075,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: A hierarchy of agents is used. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A hierarchy of agents is used. PAC organiza el sistema como una jerarquía de agentes Presentation-Abstraction-Control, útil para interfaces interactivas complejas."
     },
     {
       "id": "k109",
@@ -5093,7 +5095,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: Unique point of failure. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Unique point of failure. El estilo de datos compartidos simplifica intercambio de información, pero puede crear un punto único de fallo o acoplamiento fuerte alrededor del repositorio común."
     },
     {
       "id": "k110",
@@ -5113,7 +5115,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: knowledge sources that can partially solve a problem. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: knowledge sources that can partially solve a problem. Blackboard combina una memoria común con fuentes de conocimiento parciales que cooperan para resolver problemas complejos."
     },
     {
       "id": "k111",
@@ -5133,7 +5135,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: The use of domain experts’ declarative knowledge. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: The use of domain experts’ declarative knowledge. En los sistemas basados en reglas, el conocimiento se expresa declarativamente en reglas separadas del motor de inferencia, lo que facilita que expertos del dominio lo mantengan."
     },
     {
       "id": "k112",
@@ -5153,7 +5155,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: Clients communicate with server, and not the other way. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Clients communicate with server, and not the other way. En cliente-servidor, los clientes piden servicios al servidor; la comunicación inversa directa no forma parte de la restricción básica."
     },
     {
       "id": "k113",
@@ -5173,7 +5175,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: With the same query, we obtain the same answer. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: With the same query, we obtain the same answer. En cliente-servidor sin estado, la misma petición con la misma información debe producir la misma respuesta sin depender de sesión previa."
     },
     {
       "id": "k114",
@@ -5193,7 +5195,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: An event is something that happened (in the past). Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: An event is something that happened (in the past). En arquitectura orientada a eventos, un evento representa algo que ya ocurrió y los componentes reaccionan de forma asíncrona."
     },
     {
       "id": "k115",
@@ -5213,7 +5215,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: Event based models. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Event based models. Publish/subscribe es una variante de modelos basados en eventos donde productores publican y consumidores se suscriben sin acoplarse directamente."
     },
     {
       "id": "k116",
@@ -5233,7 +5235,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: Parallelism. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Parallelism. En el modelo de actores, cada actor encapsula estado y se comunica mediante mensajes, evitando compartir memoria directamente."
     },
     {
       "id": "k117",
@@ -5253,7 +5255,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: commands that do actions and queries that read data. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: commands that do actions and queries that read data. CQRS separa comandos que cambian estado de consultas que leen datos, permitiendo modelos y escalado distintos para escritura y lectura."
     },
     {
       "id": "k118",
@@ -5273,7 +5275,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: immutable events. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: immutable events. Event Sourcing guarda los cambios como una secuencia de eventos inmutables, lo que permite reconstruir el estado reproduciendo esos eventos."
     },
     {
       "id": "k119",
@@ -5293,7 +5295,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: it is possible to re-run the events and rebuild the state. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: it is possible to re-run the events and rebuild the state. Event Sourcing guarda los cambios como una secuencia de eventos inmutables, lo que permite reconstruir el estado reproduciendo esos eventos."
     },
     {
       "id": "k120",
@@ -5313,7 +5315,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: to adapt the system to functionality not foreseen by current developers. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: to adapt the system to functionality not foreseen by current developers. El estilo de plugins permite añadir funcionalidad no prevista inicialmente mediante extensiones conectadas a un núcleo estable."
     },
     {
       "id": "k121",
@@ -5333,7 +5335,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: Single point of failure. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Single point of failure. En microkernel, el núcleo puede convertirse en punto único de fallo si concentra demasiada responsabilidad común."
     },
     {
       "id": "k122",
@@ -5353,7 +5355,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: to change system's behaviour without stopping its execution. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: to change system's behaviour without stopping its execution. La reflexión permite inspeccionar o modificar comportamiento del sistema en ejecución, sin detenerlo por completo."
     },
     {
       "id": "k123",
@@ -5373,7 +5375,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: Performance. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Performance. Un DSL aumenta expresividad en un dominio concreto, pero no garantiza mejor rendimiento; a veces incluso añade coste de interpretación o generación."
     },
     {
       "id": "k124",
@@ -5393,7 +5395,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: code transferred from one machine to another that can execute it. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: code transferred from one machine to another that can execute it. Mobile code es código que se transfiere entre máquinas y se ejecuta en el destino, desplazando comportamiento junto con los datos necesarios."
     },
     {
       "id": "k125",
@@ -5413,7 +5415,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: is code that is transferred from the server to the client. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: is code that is transferred from the server to the client. Code on demand es la restricción opcional de REST que permite que el servidor envíe código ejecutable al cliente, por ejemplo JavaScript en una página web."
     },
     {
       "id": "k126",
@@ -5433,7 +5435,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (1)"
       ],
-      "explanation": "La respuesta correcta es: code and data that autonomously moves from one machine to another. Esta pregunta procede de los Kahoots de clase (Behaviour (1)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: code and data that autonomously moves from one machine to another. Un agente móvil combina código y datos y puede moverse autónomamente entre máquinas para continuar su ejecución."
     },
     {
       "id": "k127",
@@ -5453,7 +5455,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Remote procedure call can pass parameters. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Remote procedure call can pass parameters. Las falacias de la computación distribuida son suposiciones falsas como que la red es fiable, la latencia es cero o la topología no cambia."
     },
     {
       "id": "k128",
@@ -5473,7 +5475,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: space requirements are a challenge because log and data can be duplicated. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: space requirements are a challenge because log and data can be duplicated. PAC organiza el sistema como una jerarquía de agentes Presentation-Abstraction-Control, útil para interfaces interactivas complejas."
     },
     {
       "id": "k129",
@@ -5493,7 +5495,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: is a messaging topology with a central broker. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: is a messaging topology with a central broker. Hub and spoke centraliza comunicación en un broker o hub, reduciendo conexiones directas entre participantes."
     },
     {
       "id": "k130",
@@ -5513,7 +5515,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Separation of concerns. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Separation of concerns. El patrón Broker separa emisores, receptores y mecanismo de comunicación, aportando separación de responsabilidades."
     },
     {
       "id": "k131",
@@ -5533,7 +5535,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Avoids single point of failure. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Avoids single point of failure. Peer-to-peer evita un punto único de fallo al permitir que los nodos colaboren directamente entre sí."
     },
     {
       "id": "k132",
@@ -5553,7 +5555,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Security. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Security. SOA favorece integración y reutilización de servicios, pero seguridad no es una ventaja automática del estilo; debe diseñarse aparte."
     },
     {
       "id": "k133",
@@ -5573,7 +5575,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: UDDI was proposed as yellow pages to publish web services. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: UDDI was proposed as yellow pages to publish web services. En WS-*, UDDI se propuso como un directorio tipo páginas amarillas para publicar y descubrir servicios web."
     },
     {
       "id": "k134",
@@ -5593,7 +5595,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Is idempotent but not safe. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Is idempotent but not safe. La teoría de distribuidos insiste en comunicación, fallos parciales, escalado y acoplamiento; la opción correcta encaja con esa propiedad del estilo preguntado."
     },
     {
       "id": "k135",
@@ -5613,7 +5615,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Includes URIs in responses with more options about the application state. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Includes URIs in responses with more options about the application state. HATEOAS añade enlaces o URIs en las respuestas para guiar al cliente por las acciones disponibles según el estado de la aplicación."
     },
     {
       "id": "k136",
@@ -5633,7 +5635,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: There are several frameworks available to improve time-to-market. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: There are several frameworks available to improve time-to-market. Las arquitecturas basadas en servicios suelen apoyarse en frameworks que aceleran implementación, integración y time-to-market."
     },
     {
       "id": "k137",
@@ -5653,7 +5655,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Each service manages its own database. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Each service manages its own database. En microservicios se busca que cada servicio gestione sus propios datos para mantener autonomía y reducir acoplamiento."
     },
     {
       "id": "k138",
@@ -5673,7 +5675,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: in a bounded context. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: in a bounded context. Un microservicio debería trabajar dentro de un bounded context, con límites claros de modelo y responsabilidad."
     },
     {
       "id": "k139",
@@ -5693,7 +5695,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: too many shared libraries between microservices. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: too many shared libraries between microservices. Demasiadas librerías compartidas entre microservicios generan acoplamiento y pueden producir deterioro estructural."
     },
     {
       "id": "k140",
@@ -5713,7 +5715,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: automatic scalability is pursued. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: automatic scalability is pursued. Serverless persigue escalado automático y gestión de infraestructura por el proveedor, aunque exige vigilar costes, latencia y dependencia del proveedor."
     },
     {
       "id": "k141",
@@ -5733,7 +5735,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Vendor lock-in. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Vendor lock-in. Vendor lock-in no es una ventaja de serverless: es un riesgo por dependencia de APIs, límites y servicios del proveedor."
     },
     {
       "id": "k142",
@@ -5753,7 +5755,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: map: (K1,V1) => [(K2, V2)] reduce: (K2,[V2]) => (K2,V2). Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: map: (K1,V1) => [(K2, V2)] reduce: (K2,[V2]) => (K2,V2). MapReduce transforma pares clave-valor: map produce pares intermedios y reduce agrega los valores de cada clave."
     },
     {
       "id": "k143",
@@ -5773,7 +5775,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: uses a distributed fi le system with replication. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: uses a distributed fi le system with replication. MapReduce transforma pares clave-valor: map produce pares intermedios y reduce agrega los valores de cada clave."
     },
     {
       "id": "k144",
@@ -5793,7 +5795,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: allows to process big data in real time. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: allows to process big data in real time. Lambda combina procesamiento batch y streaming para manejar grandes volúmenes de datos con resultados históricos y casi en tiempo real."
     },
     {
       "id": "k145",
@@ -5813,7 +5815,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: combines the real time views with the precomputed batch views. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: combines the real time views with the precomputed batch views. En capas laxas, una capa puede saltar a capas inferiores no adyacentes; aumenta flexibilidad, pero debilita el aislamiento estricto."
     },
     {
       "id": "k146",
@@ -5833,7 +5835,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: a distributed and replicated log as the event store. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: a distributed and replicated log as the event store. Kappa simplifica Big Data usando un log distribuido y replicado como almacén de eventos, aunque puede duplicar datos y exigir más espacio."
     },
     {
       "id": "k147",
@@ -5853,7 +5855,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Low coupling because producer and consumer can be independent. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Low coupling because producer and consumer can be independent. La coordinación por transferencia de ficheros desacopla productor y consumidor porque ambos pueden operar de forma independiente sobre artefactos compartidos."
     },
     {
       "id": "k148",
@@ -5873,7 +5875,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: Consists in three phases: extract, transform and load. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Consists in three phases: extract, transform and load. ETL significa extraer, transformar y cargar datos, normalmente para integrar fuentes y preparar análisis."
     },
     {
       "id": "k149",
@@ -5893,7 +5895,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: employs asynchronous communication. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: employs asynchronous communication. La coordinación mediante mensajería suele usar comunicación asíncrona para desacoplar temporalmente productor y consumidor."
     },
     {
       "id": "k150",
@@ -5913,7 +5915,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: distributing microservices in servers and replication on demand. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: distributing microservices in servers and replication on demand. La escalabilidad en microservicios se logra replicando y distribuyendo servicios de forma independiente según su carga."
     },
     {
       "id": "k151",
@@ -5933,7 +5935,7 @@ const APP_DATA = {
         "kahoot",
         "Behaviour (2)"
       ],
-      "explanation": "La respuesta correcta es: The use of super-peers. Esta pregunta procede de los Kahoots de clase (Behaviour (2)); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: The use of super-peers. Los super-peers son una variante P2P donde algunos nodos asumen tareas adicionales de coordinación o índice."
     },
     {
       "id": "k152",
@@ -5953,7 +5955,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: It is necessary to invest in hardware, licenses, physical spaces, etc.. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: It is necessary to invest in hardware, licenses, physical spaces, etc. PAC organiza el sistema como una jerarquía de agentes Presentation-Abstraction-Control, útil para interfaces interactivas complejas."
     },
     {
       "id": "k153",
@@ -5973,7 +5975,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: You associate artifacts to boxes that represent computational nodes. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: You associate artifacts to boxes that represent computational nodes. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
     },
     {
       "id": "k154",
@@ -5993,7 +5995,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: You can have easier access to expensive hardware. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: You can have easier access to expensive hardware. La nube facilita acceso bajo demanda a recursos que serían caros o lentos de adquirir en infraestructura propia."
     },
     {
       "id": "k155",
@@ -6013,7 +6015,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: Identifies traditional servers as pets. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Identifies traditional servers as pets. La metáfora pets vs cattle contrasta servidores tradicionales cuidados individualmente con infraestructura reemplazable y automatizada."
     },
     {
       "id": "k156",
@@ -6033,7 +6035,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: tries to improve latency and bandwidth. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: tries to improve latency and bandwidth. Edge computing acerca cómputo y datos al usuario o dispositivo para reducir latencia y consumo de ancho de banda."
     },
     {
       "id": "k157",
@@ -6053,7 +6055,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: dynamically adjust the traffic to favour good alternatives. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: dynamically adjust the traffic to favour good alternatives. Multi-armed bandits ajusta dinámicamente el tráfico hacia alternativas que muestran mejores resultados, equilibrando exploración y explotación."
     },
     {
       "id": "k158",
@@ -6073,7 +6075,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: Gatling. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Gatling. Las pruebas de carga observan el comportamiento del sistema bajo volumen esperado o creciente de usuarios y peticiones."
     },
     {
       "id": "k159",
@@ -6093,7 +6095,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: Docker is based on kernel level process isolation. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Docker is based on kernel level process isolation. Docker usa aislamiento a nivel de kernel, por eso los contenedores comparten kernel y son más ligeros que máquinas virtuales completas."
     },
     {
       "id": "k160",
@@ -6113,7 +6115,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: is based on client-server. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: is based on client-server. En cliente-servidor, los clientes piden servicios al servidor; la comunicación inversa directa no forma parte de la restricción básica."
     },
     {
       "id": "k161",
@@ -6133,7 +6135,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: a read-only template with instructions to create one container. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: a read-only template with instructions to create one container. Una imagen Docker es una plantilla de solo lectura con instrucciones y capas para crear contenedores."
     },
     {
       "id": "k162",
@@ -6153,7 +6155,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: Allows to create images from other images. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Allows to create images from other images. En capas laxas, una capa puede saltar a capas inferiores no adyacentes; aumenta flexibilidad, pero debilita el aislamiento estricto."
     },
     {
       "id": "k163",
@@ -6173,7 +6175,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: to describe the desired state of an infrastructure with images. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: to describe the desired state of an infrastructure with images. La infraestructura inmutable describe el estado deseado mediante imágenes o plantillas y reemplaza instancias en lugar de modificarlas manualmente."
     },
     {
       "id": "k164",
@@ -6193,7 +6195,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: Performance. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Performance. Un beneficio de los contenedores es su buen rendimiento relativo al evitar virtualizar un sistema operativo completo."
     },
     {
       "id": "k165",
@@ -6213,7 +6215,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: Kubernetes can be used to orchestrate containers. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Kubernetes can be used to orchestrate containers. Docker empaqueta aplicaciones y dependencias en contenedores reproducibles, apoyando despliegue consistente."
     },
     {
       "id": "k166",
@@ -6233,7 +6235,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: automation of tasks like building, deployment, test, etc.. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: automation of tasks like building, deployment, test, etc. Un pipeline de despliegue automatiza tareas como build, pruebas, empaquetado y despliegue para obtener entregas repetibles."
     },
     {
       "id": "k167",
@@ -6253,7 +6255,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: \"If it hurts, do it more often\". Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: \"If it hurts, do it more often\". Continuous deployment empuja a automatizar y hacer frecuentes las tareas dolorosas para reducir riesgo por acumulación de cambios."
     },
     {
       "id": "k168",
@@ -6273,7 +6275,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: requests to stop them, and sometimes, retry them. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: requests to stop them, and sometimes, retry them. ADD es un método top-down de diseño guiado por atributos de calidad y escenarios, usado para elegir decisiones arquitectónicas que satisfagan esos objetivos."
     },
     {
       "id": "k169",
@@ -6293,7 +6295,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: too many errors appear, it stops attending requests x time. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: too many errors appear, it stops attending requests x time. Circuit breaker corta temporalmente llamadas cuando hay demasiados errores, evitando saturar dependencias degradadas."
     },
     {
       "id": "k170",
@@ -6313,7 +6315,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: to continue working although some parts can fail. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: to continue working although some parts can fail. Bulkhead aísla partes del sistema para que un fallo no arrastre al conjunto y el resto pueda seguir funcionando."
     },
     {
       "id": "k171",
@@ -6333,7 +6335,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: to clean system resources automatically. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: to clean system resources automatically. Una solución de steady state mantiene el sistema cerca de un estado operativo esperado, por ejemplo limpiando recursos automáticamente."
     },
     {
       "id": "k172",
@@ -6353,7 +6355,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: what needed resources are available in order to avoid doing useless work. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: what needed resources are available in order to avoid doing useless work. Fail fast valida pronto recursos y precondiciones para evitar trabajo inútil cuando el sistema no puede completar la operación."
     },
     {
       "id": "k173",
@@ -6373,7 +6375,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: That the components can be quickly replaced by others. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: That the components can be quickly replaced by others. Let it crash requiere que los componentes puedan reemplazarse rápido y de forma supervisada cuando fallan."
     },
     {
       "id": "k174",
@@ -6393,7 +6395,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: Enables to do a cooperative control of computational demands. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Enables to do a cooperative control of computational demands. Handshaking permite control cooperativo de demanda entre productor y consumidor, evitando enviar más trabajo del que puede asumirse."
     },
     {
       "id": "k175",
@@ -6413,7 +6415,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: Load balancing. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Load balancing. Load balancing reparte carga, pero no es una estrategia de backpressure porque no comunica al productor que debe reducir ritmo."
     },
     {
       "id": "k176",
@@ -6433,7 +6435,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: slow down the speed of automated actions to allow human intervention. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: slow down the speed of automated actions to allow human intervention. Governor limita o ralentiza acciones automáticas para permitir intervención humana o mantener el sistema dentro de límites seguros."
     },
     {
       "id": "k177",
@@ -6453,7 +6455,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: introduce failures in the system on purpose to test resilience. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: introduce failures in the system on purpose to test resilience. Chaos Engineering introduce fallos de forma deliberada y controlada para comprobar resiliencia antes de incidentes reales."
     },
     {
       "id": "k178",
@@ -6473,7 +6475,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: introducing new releases progressively to subsets of users. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: introducing new releases progressively to subsets of users. Canary release despliega una versión gradualmente a subconjuntos de usuarios para detectar problemas antes de generalizarla."
     },
     {
       "id": "k179",
@@ -6493,7 +6495,7 @@ const APP_DATA = {
         "kahoot",
         "Allocation"
       ],
-      "explanation": "La respuesta correcta es: to modify system's behaviour without changing the code. Esta pregunta procede de los Kahoots de clase (Allocation); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: to modify system's behaviour without changing the code. Un feature flag permite activar o desactivar comportamiento en tiempo de ejecución sin cambiar ni redesplegar código."
     },
     {
       "id": "k180",
@@ -6513,7 +6515,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Understand and navigate enterprise politics. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Understand and navigate enterprise politics. ERP integra procesos y recursos de la organización, como finanzas, compras, ventas, producción y operaciones."
     },
     {
       "id": "k181",
@@ -6533,7 +6535,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Define the business and enterprise strategy. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Define the business and enterprise strategy. ERP integra procesos y recursos de la organización, como finanzas, compras, ventas, producción y operaciones."
     },
     {
       "id": "k182",
@@ -6553,7 +6555,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: There is a trade-off between internal IT department and outsourcing. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: There is a trade-off between internal IT department and outsourcing. En empresas cuyo producto principal no es software, suele existir un compromiso entre mantener IT interno y externalizar capacidades."
     },
     {
       "id": "k183",
@@ -6573,7 +6575,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: gives support to the business strategy and IT solutions. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: gives support to the business strategy and IT solutions. ERP integra procesos y recursos de la organización, como finanzas, compras, ventas, producción y operaciones."
     },
     {
       "id": "k184",
@@ -6593,7 +6595,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Is an enterprise technique based in a model. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Is an enterprise technique based in a model. ERP integra procesos y recursos de la organización, como finanzas, compras, ventas, producción y operaciones."
     },
     {
       "id": "k185",
@@ -6613,7 +6615,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: is a framework and methodology for enterprise architectures. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: is a framework and methodology for enterprise architectures. ERP integra procesos y recursos de la organización, como finanzas, compras, ventas, producción y operaciones."
     },
     {
       "id": "k186",
@@ -6633,7 +6635,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: is the peak of inflated expectations. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: is the peak of inflated expectations. En el Hype Cycle de Gartner, el pico más alto es el pico de expectativas sobredimensionadas."
     },
     {
       "id": "k187",
@@ -6653,7 +6655,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Quality and efficiency using best practices. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Quality and efficiency using best practices. ERP integra procesos y recursos de la organización, como finanzas, compras, ventas, producción y operaciones."
     },
     {
       "id": "k188",
@@ -6673,7 +6675,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Is a domain specific language used in SAP. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Is a domain specific language used in SAP. ABAP es un lenguaje específico del ecosistema SAP usado para desarrollar y extender soluciones empresariales."
     },
     {
       "id": "k189",
@@ -6693,7 +6695,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: CRM. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: CRM. CRM gestiona relación con clientes, ventas, soporte, satisfacción y canales como call centers."
     },
     {
       "id": "k190",
@@ -6713,7 +6715,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: SCM. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: SCM. SCM gestiona la cadena de suministro, incluyendo planificación, aprovisionamiento, inventario y coordinación logística."
     },
     {
       "id": "k191",
@@ -6733,7 +6735,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: WMS. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: WMS. WMS se orienta a la gestión de almacenes: inventario, ubicaciones, movimientos y logística interna."
     },
     {
       "id": "k192",
@@ -6753,7 +6755,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: ECM. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: ECM. ECM agrupa sistemas de gestión documental y contenidos empresariales."
     },
     {
       "id": "k193",
@@ -6773,7 +6775,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: is used to manage the business process life cycle. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: is used to manage the business process life cycle. BPM gestiona el ciclo de vida de procesos de negocio: modelado, ejecución, seguimiento y mejora."
     },
     {
       "id": "k194",
@@ -6793,7 +6795,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: are business intelligence tools with multidimensional analysis. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: are business intelligence tools with multidimensional analysis. OLAP proporciona análisis multidimensional para inteligencia de negocio, facilitando consultas por dimensiones y agregaciones."
     },
     {
       "id": "k195",
@@ -6813,7 +6815,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: is a visual notation to defi ne business processes. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: is a visual notation to defi ne business processes. BPMN es una notación visual para definir y comunicar procesos de negocio."
     },
     {
       "id": "k196",
@@ -6833,7 +6835,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: encompasses the tools that manage the product life cycle. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: encompasses the tools that manage the product life cycle. PLM cubre herramientas para gestionar el ciclo de vida del producto desde concepción hasta retirada."
     },
     {
       "id": "k197",
@@ -6853,7 +6855,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: encompasses tools to integrate enterprise software. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: encompasses tools to integrate enterprise software. ERP integra procesos y recursos de la organización, como finanzas, compras, ventas, producción y operaciones."
     },
     {
       "id": "k198",
@@ -6873,7 +6875,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: to identify generic solutions to common problems in several products. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: to identify generic solutions to common problems in several products. Una línea de producto comparte activos y soluciones genéricas para una familia de productos de un segmento de mercado."
     },
     {
       "id": "k199",
@@ -6893,7 +6895,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: An SLO is an objective for an SLI. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: An SLO is an objective for an SLI. Un SLO fija un objetivo para un SLI: el indicador mide y el objetivo define el nivel esperado."
     },
     {
       "id": "k200",
@@ -6913,7 +6915,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: A system must be continually adapted, or it becomes less satisfactory. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A system must be continually adapted, or it becomes less satisfactory. En el modelo de actores, cada actor encapsula estado y se comunica mediante mensajes, evitando compartir memoria directamente."
     },
     {
       "id": "k201",
@@ -6933,7 +6935,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: modifying software structure preserving its external behaviour. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: modifying software structure preserving its external behaviour. En el modelo de actores, cada actor encapsula estado y se comunica mediante mensajes, evitando compartir memoria directamente."
     },
     {
       "id": "k202",
@@ -6953,7 +6955,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: uses to be valuable software which we fear to change. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: uses to be valuable software which we fear to change. Un sistema legacy suele ser valioso para el negocio, pero se teme modificarlo por riesgo, conocimiento perdido o baja calidad interna."
     },
     {
       "id": "k203",
@@ -6973,7 +6975,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: A complex component that changes frequently. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: A complex component that changes frequently. Un hotspot combina complejidad y frecuencia de cambio; por eso señala código con alto riesgo y alto retorno potencial de mejora."
     },
     {
       "id": "k204",
@@ -6993,7 +6995,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: are used in evolutionary architecture to analyse the evolution. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: are used in evolutionary architecture to analyse the evolution. En arquitectura evolutiva, una fitness function mide de forma continua si una propiedad arquitectónica deseada se mantiene."
     },
     {
       "id": "k205",
@@ -7013,7 +7015,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: All code, including test code. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: All code, including test code. La deuda técnica es una decisión o compromiso que acelera ahora pero genera coste futuro; puede aparecer en código, diseño, documentación o pruebas."
     },
     {
       "id": "k206",
@@ -7033,7 +7035,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: PHP. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: PHP. En el Kahoot, la respuesta marcada asocia PHP con el uso interno de libCurl; conviene recordarlo como dato específico de la pregunta."
     },
     {
       "id": "k207",
@@ -7053,7 +7055,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: DX. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: DX. DX mejora productividad del desarrollador al reducir fricción en herramientas, feedback, documentación, entornos y flujos de trabajo."
     },
     {
       "id": "k208",
@@ -7073,7 +7075,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: That are deep, with small interface and a lot of functionality. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: That are deep, with small interface and a lot of functionality. Ousterhout defiende módulos profundos: una interfaz pequeña que oculta mucha funcionalidad reduce la complejidad visible para los clientes."
     },
     {
       "id": "k209",
@@ -7093,7 +7095,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Latency if zero. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Latency if zero. Las falacias de la computación distribuida son suposiciones falsas como que la red es fiable, la latencia es cero o la topología no cambia."
     },
     {
       "id": "k210",
@@ -7113,7 +7115,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Alert fatigue. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Alert fatigue. Alert fatigue es un antipatrón DevOps: demasiadas alertas o alertas poco útiles hacen que el equipo deje de atender señales importantes."
     },
     {
       "id": "k211",
@@ -7133,7 +7135,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Error budget. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Error budget. El error budget representa el margen de errores permitido por un SLO antes de priorizar fiabilidad sobre nuevas entregas."
     },
     {
       "id": "k212",
@@ -7153,7 +7155,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Blockchain. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Blockchain. Blockchain ilustra arquitectura inmutable porque registra elementos de forma encadenada y resistente a modificaciones retroactivas."
     },
     {
       "id": "k213",
@@ -7173,7 +7175,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Was rewritten several times in several languages. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Was rewritten several times in several languages. El caso de eBay se usa para recordar evolución arquitectónica: el software fue reescrito varias veces y en varios lenguajes."
     },
     {
       "id": "k214",
@@ -7193,7 +7195,7 @@ const APP_DATA = {
         "kahoot",
         "Business"
       ],
-      "explanation": "La respuesta correcta es: Uses a unique intrinsic identifier for every software item. Esta pregunta procede de los Kahoots de clase (Business); el PDF presenta la opci?n a como soluci?n actual."
+      "explanation": "La respuesta correcta es: Uses a unique intrinsic identifier for every software item. Software Heritage identifica artefactos software mediante identificadores intrínsecos únicos, facilitando archivo y trazabilidad."
     }
   ],
   "essayTopics": [
