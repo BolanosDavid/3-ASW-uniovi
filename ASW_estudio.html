@@ -444,7 +444,9 @@ const APP_DATA = {
     "explanationsReviewed": 351,
     "kahootsTranslatedAt": "2026-05-15",
     "kahootsTranslated": 214,
-    "contentReviewedAt": "2026-05-15"
+    "contentReviewedAt": "2026-05-15",
+    "explanationSpecificityReviewedAt": "2026-05-15",
+    "explanationSpecificityFixes": 56
   },
   "questions": [
     {
@@ -879,7 +881,7 @@ const APP_DATA = {
       "tags": [
         "actores"
       ],
-      "explanation": "La respuesta correcta es: un actor es una entidad computacional con estado. MDA usa modelos como abstracciones del sistema y transformaciones automáticas o semiautomáticas para derivar productos software."
+      "explanation": "La respuesta correcta es: un actor es una entidad computacional con estado. En el modelo de actores, cada actor encapsula estado y se comunica mediante mensajes, evitando compartir recursos directamente."
     },
     {
       "id": "q030",
@@ -1059,7 +1061,7 @@ const APP_DATA = {
       "tags": [
         "release"
       ],
-      "explanation": "La respuesta correcta es: Una release suele ser publicada y las versiones internas del equipo. La clave es reconocer la práctica de laboratorio concreta y su propósito: automatizar, versionar, probar o desplegar con trazabilidad reproducible."
+      "explanation": "La respuesta correcta es: Una release suele ser publicada y las versiones internas del equipo. Una release es una versión publicada o entregable; una versión puede existir internamente antes de publicarse como release."
     },
     {
       "id": "q043",
@@ -1311,7 +1313,7 @@ const APP_DATA = {
       "tags": [
         "despliegue"
       ],
-      "explanation": "La respuesta correcta es: mantener configuración, datos y código bajo control de versiones. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
+      "explanation": "La respuesta correcta es: mantener configuración, datos y código bajo control de versiones. El despliegue automático necesita que código, datos y configuración estén versionados para poder reproducir y automatizar el proceso."
     },
     {
       "id": "q067",
@@ -1347,7 +1349,7 @@ const APP_DATA = {
       "tags": [
         "profiling"
       ],
-      "explanation": "La respuesta correcta es: informa sobre el uso de recursos durante la ejecución de un software. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
+      "explanation": "La respuesta correcta es: informa sobre el uso de recursos durante la ejecución de un software. Un profiler mide consumo de recursos durante la ejecución, como CPU, memoria o tiempos, para localizar cuellos de botella."
     },
     {
       "id": "q070",
@@ -1455,7 +1457,7 @@ const APP_DATA = {
       "tags": [
         "chaos engineering"
       ],
-      "explanation": "La respuesta correcta es: inyecta fallos adrede en sistemas distribuidos para comprobar resiliencia. Una ADR documenta contexto, decisión y consecuencias para conservar el razonamiento arquitectónico y no solo el resultado final."
+      "explanation": "La respuesta correcta es: inyecta fallos adrede en sistemas distribuidos para comprobar resiliencia. Chaos Engineering introduce fallos de forma deliberada y controlada para comprobar resiliencia antes de incidentes reales."
     },
     {
       "id": "q076",
@@ -1492,7 +1494,7 @@ const APP_DATA = {
         "BDD",
         "Gherkin"
       ],
-      "explanation": "La respuesta correcta es: es un lenguaje utilizado para definir historias de usuario. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
+      "explanation": "La respuesta correcta es: es un lenguaje utilizado para definir historias de usuario. Gherkin expresa escenarios de comportamiento en lenguaje legible por negocio y equipo técnico, favoreciendo BDD."
     },
     {
       "id": "q079",
@@ -1745,7 +1747,7 @@ const APP_DATA = {
       "tags": [
         "profiler"
       ],
-      "explanation": "La respuesta correcta es: profiler. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
+      "explanation": "La respuesta correcta es: profiler. Un profiler mide consumo de recursos durante la ejecución, como CPU, memoria o tiempos, para localizar cuellos de botella."
     },
     {
       "id": "q103",
@@ -1817,7 +1819,7 @@ const APP_DATA = {
       "tags": [
         "despliegue"
       ],
-      "explanation": "La respuesta correcta es: diagrama de despliegue. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
+      "explanation": "La respuesta correcta es: diagrama de despliegue. Un diagrama de despliegue muestra cómo se asignan artefactos o bloques software a nodos e infraestructura de ejecución."
     },
     {
       "id": "q108",
@@ -1871,7 +1873,7 @@ const APP_DATA = {
       "tags": [
         "CCD"
       ],
-      "explanation": "La respuesta correcta es: es una métrica para analizar dependencias entre componentes. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
+      "explanation": "La respuesta correcta es: es una métrica para analizar dependencias entre componentes. CCD es una métrica de dependencias entre componentes; ayuda a detectar acoplamiento estructural y coste potencial de cambio."
     },
     {
       "id": "q113",
@@ -1998,7 +2000,7 @@ const APP_DATA = {
       "tags": [
         "flaky test"
       ],
-      "explanation": "La respuesta correcta es: un test que a veces pasa y a veces no sin cambios en el código. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
+      "explanation": "La respuesta correcta es: un test que a veces pasa y a veces no sin cambios en el código. Un flaky test a veces pasa y a veces falla sin cambios en el código, por lo que reduce confianza en la suite de pruebas."
     },
     {
       "id": "q123",
@@ -2034,7 +2036,7 @@ const APP_DATA = {
       "tags": [
         "stress tests"
       ],
-      "explanation": "La respuesta correcta es: son pruebas de carga que llevan el sistema al límite. Gatling es una herramienta usada para pruebas de carga y rendimiento."
+      "explanation": "La respuesta correcta es: son pruebas de carga que llevan el sistema al límite. Las pruebas de estrés llevan el sistema al límite para descubrir puntos de ruptura y comportamiento bajo presión extrema."
     },
     {
       "id": "q126",
@@ -2088,7 +2090,7 @@ const APP_DATA = {
       "tags": [
         "inestabilidad"
       ],
-      "explanation": "La respuesta correcta es: fan-in y fan-out. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
+      "explanation": "La respuesta correcta es: fan-in y fan-out. La inestabilidad de un módulo se calcula con dependencias salientes y entrantes, es decir, fan-out y fan-in."
     },
     {
       "id": "q130",
@@ -2125,7 +2127,7 @@ const APP_DATA = {
       "tags": [
         "sidecar"
       ],
-      "explanation": "La respuesta correcta es: agrupar en un contenedor tareas periféricas como logging y configuración. RUP estructura el proceso en cuatro fases: inicio, elaboración, construcción y transición; cada una reduce riesgos y madura el producto."
+      "explanation": "La respuesta correcta es: agrupar en un contenedor tareas periféricas como logging y configuración. El patrón sidecar separa tareas periféricas, como logging o configuración, en un contenedor acompañante del servicio principal."
     },
     {
       "id": "q135",
@@ -2233,7 +2235,7 @@ const APP_DATA = {
       "tags": [
         "mutation testing"
       ],
-      "explanation": "La respuesta correcta es: se cambia el código fuente para detectar si las pruebas capturan errores. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
+      "explanation": "La respuesta correcta es: se cambia el código fuente para detectar si las pruebas capturan errores. Las pruebas de mutación introducen cambios pequeños en el código para comprobar si la suite de pruebas detecta esos errores."
     },
     {
       "id": "q144",
@@ -2306,7 +2308,7 @@ const APP_DATA = {
       "tags": [
         "definición"
       ],
-      "explanation": "La respuesta correcta es: Cada detalle interno de implementación de bajo nivel. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
+      "explanation": "La respuesta correcta es: Cada detalle interno de implementación de bajo nivel. La arquitectura se centra en estructuras, relaciones, propiedades visibles y decisiones significativas, no en cada detalle interno de bajo nivel."
     },
     {
       "id": "q151",
@@ -2468,7 +2470,7 @@ const APP_DATA = {
       "tags": [
         "ciclos"
       ],
-      "explanation": "La respuesta correcta es: dificulta evolución, pruebas y despliegue independiente. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
+      "explanation": "La respuesta correcta es: dificulta evolución, pruebas y despliegue independiente. Las dependencias cíclicas dificultan cambiar, probar y desplegar módulos de forma independiente porque las piezas quedan mutuamente acopladas."
     },
     {
       "id": "q160",
@@ -2486,7 +2488,7 @@ const APP_DATA = {
       "tags": [
         "fan-in"
       ],
-      "explanation": "La respuesta correcta es: cuántos módulos dependen de él. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
+      "explanation": "La respuesta correcta es: cuántos módulos dependen de él. El fan-in cuenta cuántos módulos dependen de un módulo dado; un fan-in alto suele indicar mayor responsabilidad o estabilidad requerida."
     },
     {
       "id": "q162",
@@ -2511,9 +2513,9 @@ const APP_DATA = {
       "source": "Teoría Te11",
       "block": "Teoría",
       "topic": "Distribuidos y Big Data",
-      "stem": "Una falacia de la computación distribuida advierte que...",
+      "stem": "La falacia \"la red es fiable\" nos recuerda que...",
       "options": [
-        "la red no es fiable.",
+        "hay que diseñar asumiendo fallos parciales de red.",
         "la latencia siempre es cero.",
         "el ancho de banda es infinito."
       ],
@@ -2522,7 +2524,7 @@ const APP_DATA = {
       "tags": [
         "falacias"
       ],
-      "explanation": "La respuesta correcta es: la red no es fiable. Las falacias de la computación distribuida son suposiciones falsas como que la red es fiable, la latencia es cero o la topología no cambia."
+      "explanation": "La respuesta correcta es: hay que diseñar asumiendo fallos parciales de red. Las falacias de la computación distribuida son suposiciones falsas que no debemos asumir: la red no siempre es fiable, la latencia no es cero y el ancho de banda no es infinito."
     },
     {
       "id": "q164",
@@ -2558,7 +2560,7 @@ const APP_DATA = {
       "tags": [
         "despliegue"
       ],
-      "explanation": "La respuesta correcta es: dónde se ejecutan componentes y cómo se asignan a infraestructura. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
+      "explanation": "La respuesta correcta es: dónde se ejecutan componentes y cómo se asignan a infraestructura. Un diagrama de despliegue ayuda a ver dónde se ejecutan los componentes y cómo se relacionan con la infraestructura."
     },
     {
       "id": "q166",
@@ -2684,7 +2686,7 @@ const APP_DATA = {
       "tags": [
         "OpenAPI"
       ],
-      "explanation": "La respuesta correcta es: describir contratos de APIs REST. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
+      "explanation": "La respuesta correcta es: describir contratos de APIs REST. OpenAPI documenta contratos de APIs REST: endpoints, operaciones, parámetros, esquemas y respuestas esperadas."
     },
     {
       "id": "q175",
@@ -2702,7 +2704,7 @@ const APP_DATA = {
       "tags": [
         "BDD"
       ],
-      "explanation": "La respuesta correcta es: escenarios legibles por negocio y equipo técnico. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
+      "explanation": "La respuesta correcta es: escenarios legibles por negocio y equipo técnico. BDD con Gherkin favorece escenarios compartidos y legibles por negocio y equipo técnico, ayudando a convertir historias en pruebas de aceptación."
     },
     {
       "id": "q176",
@@ -2756,7 +2758,7 @@ const APP_DATA = {
       "tags": [
         "observability"
       ],
-      "explanation": "La respuesta correcta es: logs, métricas y trazas. Monitorizar observa el sistema en producción mediante métricas, logs y paneles para detectar estado y tendencias operativas."
+      "explanation": "La respuesta correcta es: logs, métricas y trazas. La observabilidad se apoya en logs, métricas y trazas para entender el comportamiento interno del sistema desde sus señales externas."
     },
     {
       "id": "q180",
@@ -2774,7 +2776,7 @@ const APP_DATA = {
       "tags": [
         "API"
       ],
-      "explanation": "La respuesta correcta es: contratos claros, compatibilidad y evolución controlada. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
+      "explanation": "La respuesta correcta es: contratos claros, compatibilidad y evolución controlada. Un buen diseño de API prioriza contratos claros, compatibilidad y evolución controlada para que clientes y servidor puedan cambiar sin romperse."
     },
     {
       "id": "q181",
@@ -2792,7 +2794,7 @@ const APP_DATA = {
       "tags": [
         "observability"
       ],
-      "explanation": "La respuesta correcta es: formular y responder preguntas sobre el sistema sin redeploy. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
+      "explanation": "La respuesta correcta es: formular y responder preguntas sobre el sistema sin redeploy. Una señal útil de observabilidad permite formular y responder preguntas nuevas sobre el sistema sin cambiar código ni redesplegar."
     },
     {
       "id": "q182",
@@ -2810,7 +2812,7 @@ const APP_DATA = {
       "tags": [
         "testing"
       ],
-      "explanation": "La respuesta correcta es: reducir intervención manual y aumentar confianza en cambios. La observabilidad combina logs, métricas y trazas para responder preguntas nuevas sobre el comportamiento del sistema sin redeploy."
+      "explanation": "La respuesta correcta es: reducir intervención manual y aumentar confianza en cambios. Las pruebas autónomas reducen intervención manual y aumentan confianza al comprobar cambios de forma repetible y automatizada."
     },
     {
       "id": "q183",
@@ -2900,7 +2902,7 @@ const APP_DATA = {
       "tags": [
         "AI native"
       ],
-      "explanation": "La respuesta correcta es: datos, observabilidad, costes, latencia y operación de sistemas con IA. La nube facilita acceso bajo demanda a recursos que serían caros o lentos de adquirir en infraestructura propia."
+      "explanation": "La respuesta correcta es: datos, observabilidad, costes, latencia y operación de sistemas con IA. El paso a AI native obliga a tratar datos, latencia, coste, observabilidad y operación de modelos como preocupaciones arquitectónicas centrales."
     },
     {
       "id": "q188",
@@ -3078,7 +3080,7 @@ const APP_DATA = {
         "Kahoots",
         "Definiciones"
       ],
-      "explanation": "La respuesta correcta es: Es un problema porque puede generar demasiados documentos o diagramas innecesarios. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
+      "explanation": "La respuesta correcta es: Es un problema porque puede generar demasiados documentos o diagramas innecesarios. Big Design Up-Front puede generar documentación y diagramas antes de saber si son necesarios, reduciendo capacidad de aprendizaje."
     },
     {
       "id": "k009",
@@ -3398,7 +3400,7 @@ const APP_DATA = {
         "Kahoots",
         "Definiciones"
       ],
-      "explanation": "La respuesta correcta es: Contiene una asignación de bloques de construcción software a infraestructura. La vista de bloques de construcción de arc42 puede combinar diagramas de caja blanca y caja negra para describir composición interna y límites."
+      "explanation": "La respuesta correcta es: Contiene una asignación de bloques de construcción software a infraestructura. La vista de despliegue de arc42 asigna bloques software a infraestructura, nodos y entornos de ejecución."
     },
     {
       "id": "k025",
@@ -3438,7 +3440,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Mover cosas que no sabe a cosas que sabe que no sabe. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Mover cosas que no sabe a cosas que sabe que no sabe. Un buen arquitecto reduce incertidumbre haciendo explícito lo que no sabe y convirtiendo incógnitas desconocidas en riesgos o dudas conocidas."
     },
     {
       "id": "k027",
@@ -3458,7 +3460,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Más amplitud técnica que profundidad técnica. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Más amplitud técnica que profundidad técnica. El arquitecto necesita amplitud técnica para entender alternativas y trade-offs; no necesariamente más profundidad que cada especialista."
     },
     {
       "id": "k028",
@@ -3478,7 +3480,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Humildad, confianza y respeto. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Humildad, confianza y respeto. Humildad, confianza y respeto facilitan conversaciones técnicas sanas, revisión de decisiones y aprendizaje sin ocultar riesgos."
     },
     {
       "id": "k029",
@@ -3498,7 +3500,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Son personas interesadas en el proyecto. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Son personas interesadas en el proyecto. Los stakeholders son personas o grupos interesados o afectados por el proyecto; sus preocupaciones condicionan requisitos y decisiones arquitectónicas."
     },
     {
       "id": "k030",
@@ -3518,7 +3520,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Número de personas que tendrían que ser atropelladas por un autobús para que el proyecto quedase condenado. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Número de personas que tendrían que ser atropelladas por un autobús para que el proyecto quedase condenado. El bus factor mide cuántas personas clave podrían desaparecer antes de que el proyecto quedase seriamente bloqueado por concentración de conocimiento."
     },
     {
       "id": "k031",
@@ -3538,7 +3540,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Controlador obsesivo y arquitecto de sofá. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Controlador obsesivo y arquitecto de sofá. El arquitecto debe guiar las decisiones importantes sin controlar cada detalle ni quedarse desconectado de la implementación real."
     },
     {
       "id": "k032",
@@ -3558,7 +3560,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: producen diseños que son copias de sus estructuras de comunicación. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: producen diseños que son copias de sus estructuras de comunicación. La ley de Conway indica que las organizaciones tienden a producir sistemas que reflejan sus estructuras de comunicación."
     },
     {
       "id": "k033",
@@ -3578,7 +3580,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Evolucionar equipos para promover la arquitectura deseada. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Evolucionar equipos para promover la arquitectura deseada. La maniobra inversa de Conway ajusta la estructura de equipos para favorecer la arquitectura que se quiere conseguir."
     },
     {
       "id": "k034",
@@ -3598,7 +3600,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Diferencia entre el potencial del grupo y la productividad real. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Diferencia entre el potencial del grupo y la productividad real. Process loss es la diferencia entre el potencial del grupo y la productividad real por coordinación, comunicación o dinámicas de equipo."
     },
     {
       "id": "k035",
@@ -3618,7 +3620,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Todos aceptan algo públicamente pero discrepan en privado. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Todos aceptan algo públicamente pero discrepan en privado. La ignorancia colectiva ocurre cuando todos parecen aceptar algo en público aunque privadamente discrepen, ocultando riesgos reales."
     },
     {
       "id": "k036",
@@ -3638,7 +3640,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: No esté claro quién es responsable de qué. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: No esté claro quién es responsable de qué. La difusión de responsabilidad hace que no quede claro quién debe actuar o decidir, generando huecos de propiedad."
     },
     {
       "id": "k037",
@@ -3658,7 +3660,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Pueden ser contradictorias. La arquitectura se decide principalmente por atributos de calidad y requisitos no funcionales, porque condicionan estructura, tecnología y trade-offs."
+      "explanation": "La respuesta correcta es: Pueden ser contradictorias. Las preocupaciones de stakeholders pueden contradecirse, por lo que la arquitectura debe explicitar compromisos y prioridades."
     },
     {
       "id": "k038",
@@ -3718,7 +3720,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Un mapa mental. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
+      "explanation": "La respuesta correcta es: Un mapa mental. Un mapa mental puede ayudar a representar y organizar atributos de calidad antes de convertirlos en escenarios medibles."
     },
     {
       "id": "k041",
@@ -3918,7 +3920,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Son métricas objetivas de algunos aspectos de calidad del software. La programación orientada a aspectos encapsula preocupaciones transversales, como logging o seguridad, y favorece su reutilización sin dispersarlas por muchos módulos."
+      "explanation": "La respuesta correcta es: Son métricas objetivas de algunos aspectos de calidad del software. Las métricas software objetivan aspectos de calidad para apoyar decisiones, detectar tendencias y comprobar si se cumplen objetivos."
     },
     {
       "id": "k051",
@@ -3938,7 +3940,7 @@ const APP_DATA = {
         "Kahoots",
         "Stakeholders y atributos de calidad"
       ],
-      "explanation": "La respuesta correcta es: Complejidad ciclomática. La complejidad ciclomática de McCabe mide caminos independientes en el código y se usa como indicador objetivo de complejidad."
+      "explanation": "La respuesta correcta es: Complejidad ciclomática. Las cuatro métricas DORA evalúan rendimiento de entrega y operación; la complejidad ciclomática no forma parte de ese conjunto."
     },
     {
       "id": "k052",
@@ -4238,7 +4240,7 @@ const APP_DATA = {
         "Kahoots",
         "Tácticas y construcción"
       ],
-      "explanation": "La respuesta correcta es: 9. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
+      "explanation": "La respuesta correcta es: 9. El CDD del esquema se obtiene contando las dependencias del grafo de módulos mostrado en el Kahoot; la opción marcada corresponde al cálculo de esa figura."
     },
     {
       "id": "k067",
@@ -4258,7 +4260,7 @@ const APP_DATA = {
         "Kahoots",
         "Tácticas y construcción"
       ],
-      "explanation": "La respuesta correcta es: 13. La opción correcta recoge la definición o consecuencia aceptada en la teoría de la asignatura; las alternativas mezclan conceptos cercanos o pertenecen a otros bloques."
+      "explanation": "La respuesta correcta es: 13. El CDD del esquema se obtiene contando las dependencias del grafo de módulos mostrado en el Kahoot; la opción marcada corresponde al cálculo de esa figura."
     },
     {
       "id": "k068",
@@ -4578,7 +4580,7 @@ const APP_DATA = {
         "Kahoots",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: Alta cohesión y bajo acoplamiento. La respuesta aplica principios de modularidad: alta cohesión, bajo acoplamiento, dependencias controladas y facilidad de cambio."
+      "explanation": "La respuesta correcta es: Alta cohesión y bajo acoplamiento. La modularidad busca alta cohesión dentro de cada módulo y bajo acoplamiento entre módulos para facilitar cambio y comprensión."
     },
     {
       "id": "k084",
@@ -4718,7 +4720,7 @@ const APP_DATA = {
         "Kahoots",
         "Modularity"
       ],
-      "explanation": "La respuesta correcta es: I(B)=0.5, I(C)=0. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
+      "explanation": "La respuesta correcta es: I(B)=0.5, I(C)=0. La inestabilidad se calcula a partir de dependencias entrantes y salientes; en el diagrama del Kahoot, B y C dan esos valores."
     },
     {
       "id": "k091",
@@ -5058,7 +5060,7 @@ const APP_DATA = {
         "Kahoots",
         "Comportamiento (1)"
       ],
-      "explanation": "La respuesta correcta es: Es más fácil crear nuevos controladores y vistas. Una vista arquitectónica es una representación del sistema orientada a preocupaciones concretas de los stakeholders."
+      "explanation": "La respuesta correcta es: Es más fácil crear nuevos controladores y vistas. En MVC, separar modelo, vistas y controladores facilita añadir nuevas vistas o controladores sin cambiar el modelo central."
     },
     {
       "id": "k108",
@@ -5478,7 +5480,7 @@ const APP_DATA = {
         "Kahoots",
         "Comportamiento (2)"
       ],
-      "explanation": "La respuesta correcta es: los requisitos de espacio son un reto porque el log y los datos pueden duplicarse. PAC organiza el sistema como una jerarquía de agentes Presentation-Abstraction-Control, útil para interfaces interactivas complejas."
+      "explanation": "La respuesta correcta es: los requisitos de espacio son un reto porque el log y los datos pueden duplicarse. Kappa simplifica Big Data usando un log distribuido y replicado como almacén de eventos, aunque puede duplicar datos y exigir más espacio."
     },
     {
       "id": "k129",
@@ -5778,7 +5780,7 @@ const APP_DATA = {
         "Kahoots",
         "Comportamiento (2)"
       ],
-      "explanation": "La respuesta correcta es: usa un sistema de ficheros distribuido con replicación. MapReduce transforma pares clave-valor: map produce pares intermedios y reduce agrega los valores de cada clave."
+      "explanation": "La respuesta correcta es: usa un sistema de ficheros distribuido con replicación. MapReduce se apoya en almacenamiento distribuido y replicado para procesar grandes volúmenes de datos de forma paralela."
     },
     {
       "id": "k144",
@@ -5818,7 +5820,7 @@ const APP_DATA = {
         "Kahoots",
         "Comportamiento (2)"
       ],
-      "explanation": "La respuesta correcta es: combina las vistas en tiempo real con las vistas batch precomputadas. En capas laxas, una capa puede saltar a capas inferiores no adyacentes; aumenta flexibilidad, pero debilita el aislamiento estricto."
+      "explanation": "La respuesta correcta es: combina las vistas en tiempo real con las vistas batch precomputadas. En Lambda, la serving layer combina vistas batch precomputadas con vistas de tiempo real para responder consultas."
     },
     {
       "id": "k146",
@@ -5958,7 +5960,7 @@ const APP_DATA = {
         "Kahoots",
         "Asignación"
       ],
-      "explanation": "La respuesta correcta es: Es necesario invertir en hardware, licencias, espacios físicos, etc. PAC organiza el sistema como una jerarquía de agentes Presentation-Abstraction-Control, útil para interfaces interactivas complejas."
+      "explanation": "La respuesta correcta es: Es necesario invertir en hardware, licencias, espacios físicos, etc. On premises implica ejecutar en instalaciones propias, asumiendo inversión y operación de hardware, licencias, espacio físico y mantenimiento."
     },
     {
       "id": "k153",
@@ -5978,7 +5980,7 @@ const APP_DATA = {
         "Kahoots",
         "Asignación"
       ],
-      "explanation": "La respuesta correcta es: Asocias artefactos a cajas que representan nodos computacionales. Una vista representa el sistema según ciertas preocupaciones; uno o varios diagramas pueden ser parte de la documentación de esa vista."
+      "explanation": "La respuesta correcta es: Asocias artefactos a cajas que representan nodos computacionales. Un diagrama de despliegue asocia artefactos a nodos computacionales para mostrar dónde se ejecuta el software."
     },
     {
       "id": "k154",
@@ -6078,7 +6080,7 @@ const APP_DATA = {
         "Kahoots",
         "Asignación"
       ],
-      "explanation": "La respuesta correcta es: Gatling. Las pruebas de carga observan el comportamiento del sistema bajo volumen esperado o creciente de usuarios y peticiones."
+      "explanation": "La respuesta correcta es: Gatling. Gatling es una herramienta usada para pruebas de carga y rendimiento."
     },
     {
       "id": "k159",
@@ -6118,7 +6120,7 @@ const APP_DATA = {
         "Kahoots",
         "Asignación"
       ],
-      "explanation": "La respuesta correcta es: se basa en cliente-servidor. En cliente-servidor, los clientes piden servicios al servidor; la comunicación inversa directa no forma parte de la restricción básica."
+      "explanation": "La respuesta correcta es: se basa en cliente-servidor. La arquitectura de Docker se organiza como cliente-servidor: el cliente envía órdenes al daemon que gestiona imágenes y contenedores."
     },
     {
       "id": "k161",
@@ -6158,7 +6160,7 @@ const APP_DATA = {
         "Kahoots",
         "Asignación"
       ],
-      "explanation": "La respuesta correcta es: Permite crear imágenes a partir de otras imágenes. En capas laxas, una capa puede saltar a capas inferiores no adyacentes; aumenta flexibilidad, pero debilita el aislamiento estricto."
+      "explanation": "La respuesta correcta es: Permite crear imágenes a partir de otras imágenes. El modelo por capas de Docker permite reutilizar capas y construir imágenes a partir de otras imágenes."
     },
     {
       "id": "k163",
@@ -6278,7 +6280,7 @@ const APP_DATA = {
         "Kahoots",
         "Asignación"
       ],
-      "explanation": "La respuesta correcta es: las peticiones para detenerlas y, a veces, reintentarlas. ADD es un método top-down de diseño guiado por atributos de calidad y escenarios, usado para elegir decisiones arquitectónicas que satisfagan esos objetivos."
+      "explanation": "La respuesta correcta es: las peticiones para detenerlas y, a veces, reintentarlas. Timeout añade un límite temporal a una petición para evitar esperas indefinidas y permitir fallar o reintentar de forma controlada."
     },
     {
       "id": "k169",
